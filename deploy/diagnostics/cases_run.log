@@ -1,0 +1,11 @@
+wallets: owner 0x880100f0a9f5ec5c88701049e058f49402995ab0, alice 0xef6e006cd8a68c9cfe88a3640415ab0c79c71921, bob 0x41c1be19a7726e593e09f2e8748369afbeba2580, carol 0xcc7edd6b8bcb5febcc62cf47b4923a8267831e56, dave 0x6c9de015919764af69580cbc7382a93cb788e36a, stranger 0xa141a003dc7e801517a838f88193229078a4d614
+  verified 19 source locations against local bytes
+  funding owner from the faucet (balance 0)
+  funding alice from the faucet (balance 0)
+  funding bob from the faucet (balance 0)
+  funding carol from the faucet (balance 0)
+  funding dave from the faucet (balance 0)
+  funding stranger from the faucet (balance 0)
+  owner.create_campaign tx 0xe3082db93736d3f52091b232a40b5ecbdad4ee941afe6fa0704133d80e2b5bb8
+    FINALIZED leader ERROR votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+FATAL: create:explainer: leader execution ERROR, expected SUCCESS

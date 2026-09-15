@@ -1,0 +1,29 @@
+{
+  "address": "0xB1fAa2bf3e1807fE1AB86fbe186452033c5a6566",
+  "campaigns": {},
+  "fatal": "create:explainer: leader execution ERROR, expected SUCCESS",
+  "network": "studionet",
+  "pending": {},
+  "phase": "cases",
+  "raw_base": "https://raw.githubusercontent.com/Olawalter/ContributorCourt/4a88111a9e09fae8bb9c5f9bef8667d65dbf0f7b/fixtures/",
+  "started_at": "2026-09-15T17:23:25Z",
+  "steps": {
+    "create:explainer": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "ERROR",
+      "method": "create_campaign",
+      "returned": "[EXPECTED] opens_at <= work_deadline <= submission_deadline must hold",
+      "status": "FINALIZED",
+      "step": "create:explainer",
+      "tx": "0xe3082db93736d3f52091b232a40b5ecbdad4ee941afe6fa0704133d80e2b5bb8",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    }
+  }
+}

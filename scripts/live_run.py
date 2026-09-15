@@ -263,8 +263,9 @@ def live_spec(name: str, raw: str, **overrides) -> str:
     data = json.loads(json.dumps(CATALOGUE["campaigns"][name]))
     for ref in data["reference_sources"]:
         ref["url"] = ref["url"].replace("{BASE}", raw)
-    data.update({"submission_deadline": now_iso(5 * 3600), "appeal_window_seconds": APPEAL_WINDOW,
-                 "stall_window_seconds": LONG_STALL})
+    # the catalogue's dates stand (the work deadline is what the late case is judged
+    # against); only the windows shrink to what a live run can wait out
+    data.update({"appeal_window_seconds": APPEAL_WINDOW, "stall_window_seconds": LONG_STALL})
     data.update(overrides)
     return json.dumps(data)
 
