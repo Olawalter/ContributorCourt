@@ -77,7 +77,7 @@ every readable, eligible item, and answers every subject (`PANEL_HEADER`):
 
 | Subject | States |
 |---|---|
-| `RELEVANCE` | `SATISFIED`, `PARTIALLY_SATISFIED`, `NOT_SATISFIED`, `UNVERIFIABLE` |
+| `RELEVANCE` (what the work is about, not how well it does the task) | `SATISFIED`, `PARTIALLY_SATISFIED`, `NOT_SATISFIED`, `UNVERIFIABLE` |
 | `SUBSTANTIVE` | same |
 | `ORIGINALITY` | `ORIGINAL`, `ATTRIBUTED_DERIVATIVE`, `COPIED`, `UNDETERMINED` |
 | `LATE_DATING` | `PRESENT`, `ABSENT`, `UNDETERMINED` |
@@ -89,7 +89,7 @@ every readable, eligible item, and answers every subject (`PANEL_HEADER`):
 |---|---|
 | `SATISFIED` or `PARTIALLY_SATISFIED` on relevance, substance or a criterion | the work itself (`E1`), never only a source it cites |
 | `ATTRIBUTED_DERIVATIVE` | the credit, from `E1` |
-| `COPIED` | the passage in `E1` and the matching passage in a cited or reference source |
+| `COPIED` | the passage in `E1` and the same passage in a cited or reference source: the two quotes must share a run of at least 12 consecutive words (`COPY_RUN_WORDS`, `_shared_run`) |
 | `LATE_DATING` `PRESENT` | a date from `E1` (the quote must contain a four-digit year) |
 | `NOT_SATISFIED`, `UNVERIFIABLE`, `ORIGINAL`, `ABSENT`, `UNDETERMINED` | nothing |
 
@@ -131,7 +131,8 @@ Example (the explainer campaign: C1 weight 50 required, C2 30, C3 20, bands GOLD
 
 - Promotion, link lists and filler are `SUBSTANTIVE` `NOT_SATISFIED`: rejected, bond returned.
 - Byte-identical copies of a reference or an approved work are decided by code, bond forfeited.
-- Copies the panel can see against a cited or reference source are `COPIED`, bond forfeited.
+- Word-for-word copies the panel can see against a cited or reference source are `COPIED`, bond forfeited. A work that covers the same subject, facts or terms in its own words is `ORIGINAL`; two texts on one subject share short phrases, and a shared phrase is never a copy.
+- Paraphrase without credit is not claimed as detectable: a `COPIED` finding without a 12-word shared run falls back to undecided (`INCONCLUSIVE`, bond returned, no reward).
 - A copy of a source nobody showed the panel cannot be seen by it. The owner can appeal with that source added as a reference (see below).
 - Late work is caught twice: by the declared publication time in code, and by the work dating itself after the deadline in the panel.
 

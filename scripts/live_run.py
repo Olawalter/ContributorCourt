@@ -286,8 +286,11 @@ def campaign(ac: dict, key: str, name: str, raw: str, pool: int, **overrides) ->
         ids[key] = page["items"][-1]
         save()
     cid = ids[key]
-    owner.write("fund:" + key, "fund_campaign", [cid], value=pool)
-    owner.write("activate:" + key, "activate_campaign", [cid])
+    held = int(owner.read("get_campaign", [cid, now_iso()])["pool_atto"])
+    if held < pool:
+        owner.write("fund:" + key + ":" + str(pool), "fund_campaign", [cid], value=pool - held)
+    if owner.read("get_campaign", [cid, now_iso()])["status"] == "DRAFT":
+        owner.write("activate:" + key, "activate_campaign", [cid])
     return cid
 
 
@@ -301,7 +304,10 @@ def submit(ac: dict, step: str, cid: str, case_id: str, raw: str, contributor: s
             HASHES["sources/" + case["work"]], case["publication_at"], case["summary"],
             source_list(case["supporting"], raw)]
     record = who.write(step, "submit_contribution", args, value=bond)
-    return record.get("returned", "")
+    returned = record.get("returned", "")
+    if not step.startswith("refuse:"):
+        check("RETURNED" not in returned, f"{step}: the filing was refused: {returned}")
+    return returned
 
 
 def submission_of(ac: dict, cid: str, case_id: str) -> str:
@@ -340,7 +346,8 @@ def outcome(ac: dict, key: str, sid: str, expected: list, tx: str) -> dict:
 
 
 def run_cases(ac: dict, raw: str, with_appeals: bool):
-    cids = {"explainer": campaign(ac, "explainer", "explainer", raw, 400 * MILLI),
+    # each filing reserves its campaign's highest reward: fund every campaign for all of its cases
+    cids = {"explainer": campaign(ac, "explainer", "explainer", raw, 520 * MILLI),
             "translation": campaign(ac, "translation", "translation", raw, 50 * MILLI),
             "docs": campaign(ac, "docs", "docs", raw, 70 * MILLI)}
     for case_id in sorted(CASES):

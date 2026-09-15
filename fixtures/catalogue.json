@@ -296,11 +296,11 @@
       "quotes": [
        {
         "evidence_id": "E1",
-        "text": "A set of other validators then repeat the same work independently"
+        "text": "A set of other validators then repeat the same work independently and vote on whether the leader's result"
        },
        {
         "evidence_id": "E2",
-        "text": "A set of other validators then repeat the same work independently"
+        "text": "A set of other validators then repeat the same work independently and vote on whether the leader's result"
        }
       ],
       "state": "COPIED"
@@ -1069,11 +1069,11 @@
       "quotes": [
        {
         "evidence_id": "E1",
-        "text": "one validator goes first and proposes an answer"
+        "text": "one validator goes first and proposes an answer, and the rest of the validators check that answer"
        },
        {
         "evidence_id": "E3",
-        "text": "one validator goes first and proposes an answer"
+        "text": "one validator goes first and proposes an answer, and the rest of the validators check that answer"
        }
       ],
       "state": "COPIED"
@@ -1129,14 +1129,14 @@
   }
  ],
  "hashes": {
-  "sources/external/rosa-consensus-notes.md": "3d644a985f8e3f144d4ebf742d09bda5af56dc57a3d9b59531efc02e7c92e551",
+  "sources/external/rosa-consensus-notes.md": "eedb29225e656396bec41c3311224599ec036be8b41f2f86484f1e5e5a3ad7bf",
   "sources/references/export-command-spec.md": "2520a2262a51cf58e40c9795ac7d0008039187ea2fcfa2eb65cc50dc56367d99",
   "sources/references/optimistic-democracy-in-brief.md": "6ec95cc3dc65c38a9c2dbf78c0ed4555361cf3145f5b131b360fc83519ced879",
   "sources/work/alice/ledger-export-example-output.txt": "21ca16cd2ae679513b08b42fbd4bcd72a8c38c8068edf0bbce1ac7f40dd0cedf",
   "sources/work/alice/ledger-export-guide.md": "70afe468df444e95366d10ee49dfb697b96d848d56ebf99ae46837cc5cb61316",
   "sources/work/alice/optimistic-democracy-explained.md": "12205997d1a3bba76ff236884161283576bb485013d83240123f8ef6a0f26cf7",
   "sources/work/alice/optimistic-democracy-summary.md": "cc4e927629ced74253b621e69f5dbb30d5702037ae36754f7eaadc1f7b7820a8",
-  "sources/work/bob/consensus-for-builders.md": "e3e3598ad8d16239c89d7123d00d4990474196e06e9420bf7330955c900c028e",
+  "sources/work/bob/consensus-for-builders.md": "7cd52fc28b428b830382e662adc38a58704f9e8c218bd28937db9f3d35d51e11",
   "sources/work/bob/optimistic-democracy-guide.md": "1470adb9061f5a0025f5d180f6be19ee5296498ddd4002c1bda24051e7ced4ec",
   "sources/work/bob/optimistic-democracy-in-brief.md": "6ec95cc3dc65c38a9c2dbf78c0ed4555361cf3145f5b131b360fc83519ced879",
   "sources/work/bob/optimistic-democracy-review.md": "0ba4b86d6e987ce27f223dd7cc7af742834eee19877c613fc7280cad9619a929",

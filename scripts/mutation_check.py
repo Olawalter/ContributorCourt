@@ -70,9 +70,10 @@ MUTATIONS = [
     m("too few cited sources are enough",
       "    if len(readable_supporting) < ctx[\"min_supporting_sources\"]:"),
     # -- support rules -----------------------------------------------------------------
-    m("a copy needs to be shown from one side only",
-      "            return len(from_primary) > 0 and len(others) > 0\n",
-      "            return len(from_primary) > 0\n"),
+    m("two quotes on one subject are a copy",
+      "            return any(_shared_run(a[\"text\"], b[\"text\"]) >= COPY_RUN_WORDS\n",
+      "            return any(_shared_run(a[\"text\"], b[\"text\"]) >= 1\n"),
+    m("a copy needs thirteen shared words", "COPY_RUN_WORDS = 12 ", "COPY_RUN_WORDS = 13 "),
     m("a credited derivative needs no credit quoted",
       "        if state == ATTRIBUTED_DERIVATIVE:\n            return len(from_primary) > 0\n",
       "        if state == ATTRIBUTED_DERIVATIVE:\n            return True\n"),

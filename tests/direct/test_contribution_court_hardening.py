@@ -490,6 +490,33 @@ def test_a_copy_must_be_shown_from_both_sides(court, direct_vm):
     assert record["status"] == "INCONCLUSIVE" and record["bond_outcome"] == "RETURN"
 
 
+def test_a_shared_subject_is_not_a_copy(court, direct_vm):
+    """The live diagnostic's false copy, word for word: three models called the
+    honest explainer COPIED, quoting passages of the work and the reference
+    that share a subject and short phrases but no run of twelve words. The
+    finding falls back to undecided: no forfeited bond, no reward."""
+    answer = answer_for("CC01")
+    answer["subjects"]["ORIGINALITY"] = {"state": "COPIED", "note": "", "quotes": [
+        {"evidence_id": "E1", "text": "A result that wins a majority is accepted, but anyone who "
+                                      "thinks the accepted result is wrong can appeal before the "
+                                      "appeal window closes."},
+        {"evidence_id": "E2", "text": "If a majority agrees, the result is accepted "
+                                      "optimistically. It becomes final once an appeal window "
+                                      "passes without a successful challenge."}]}
+    record = cc01(court, direct_vm, answer)
+    assert finding(record, "ORIGINALITY")["state"] == "UNDETERMINED"
+    assert record["status"] == "INCONCLUSIVE" and record["bond_outcome"] == "RETURN"
+
+
+def test_a_copy_needs_twelve_shared_words_not_eleven(court, direct_vm, mod):
+    roles = {"E1": "PRIMARY", "E2": "REFERENCE"}
+    eleven = "A set of other validators then repeat the same work independently"
+    twelve = eleven + " and"
+    for text, met in ((eleven, False), (twelve, True)):
+        quotes = [{"evidence_id": "E1", "text": text}, {"evidence_id": "E2", "text": text}]
+        assert mod._support_met("ORIGINALITY", "COPIED", quotes, roles) is met
+
+
 def test_a_copy_shown_from_both_sides_stands(court, direct_vm):
     campaign_id = open_campaign(court, direct_vm)
     submission_id = submit(court, direct_vm, campaign_id, "CC02")
@@ -694,6 +721,20 @@ def test_a_leader_error_is_ratified_only_by_the_same_error(mod, leader, own, agr
         if own is not None:
             raise mod.gl.vm.UserError(own)
     assert mod._vote_on_leader_error(mod.gl.vm.UserError(leader), reproduce) is agrees
+
+
+def test_the_gate_recomputes_the_code_reason(court, direct_vm, mod):
+    """Validators also compare the reason, so only a direct parse shows the
+    gate's own recomputation: a payload claiming a code decision its own rows
+    do not support is refused."""
+    record = cc01(court, direct_vm, skip=("sources/" + CASES["CC01"]["work"],))
+    assert record["reason_code"] == "PRIMARY_UNAVAILABLE"
+    ctx = captured_ctx(direct_vm)
+    payload = captured_payload(direct_vm)
+    assert mod._parse_payload(mod._canonical(payload), ctx, None) is not None
+    bad = copy.deepcopy(payload)
+    bad["panel_reason"] = "MANIPULATION"      # a harsher code decision: the bond would go
+    assert mod._parse_payload(mod._canonical(bad), ctx, None) is None
 
 
 def test_the_ratified_payload_is_gated_again_before_it_is_written(court, direct_vm, mod):
@@ -903,3 +944,16 @@ def test_views_are_paginated_and_bounded(court, direct_vm):
     assert wallet("alice") == court.get_submission("SB-000001")["contributor"]
     assert HASHES["sources/" + CASES["CC01"]["work"]] == \
         court.get_submission("SB-000001")["items"][0]["sha256"]
+
+
+def test_a_leader_misreporting_the_authorship_mark_is_outvoted_even_when_unrequired(
+        court, direct_vm, mod):
+    """With the mark not required a flipped flag changes no status, but the
+    record would say something no validator read."""
+    campaign_id = open_campaign(court, direct_vm, require_author_mark=False)
+    submission_id = submit(court, direct_vm, campaign_id, "CC01")
+    evaluate(court, direct_vm, submission_id, answer_for("CC01"))
+    leader = captured_payload(direct_vm)
+    assert leader["author_mark"] is True
+    leader["author_mark"] = False
+    assert validate(direct_vm, mod, leader) is False

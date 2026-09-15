@@ -7,7 +7,7 @@ I wrote this for people shipping their first Intelligent Contract.
 
 When a contract needs a judgment call, one validator goes first and proposes
 an answer, and the rest of the validators check that answer by doing the same
-job themselves.
+job themselves and then voting on whether to accept it.
 
 What makes this workable is that validators do not need identical text. They
 compare whether two answers mean the same thing under the rule the contract

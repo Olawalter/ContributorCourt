@@ -91,9 +91,14 @@ who wrote them or when.
   contract (`approved_digests`). A rejected filing registers nothing, so filing
   someone's work badly does not make their later filing a duplicate. An appeal
   that overturns an approval releases the digest.
-- **Semantic copies** are judged only against the items shown to the panel: the
-  campaign's references, the work's cited sources, and a source added on appeal.
-  This is not plagiarism detection across the web.
+- **Copies the panel judges** are word-for-word: a `COPIED` finding must quote a
+  run of at least 12 consecutive words shared by the work and a source shown to
+  the panel (the campaign's references, the work's cited sources, a source added
+  on appeal). Shared subject matter and short shared phrases are never a copy;
+  the diagnostic pass on StudioNet found three models calling an honest
+  explainer a copy on exactly that basis, which is why the run is required.
+  Paraphrase without credit is not detected. This is not plagiarism detection
+  across the web.
 - **Publication time** is the contributor's declaration, checked in code against
   the campaign's dates and by the panel against any date the work gives itself.
   A work that states no date cannot be dated beyond the declaration.

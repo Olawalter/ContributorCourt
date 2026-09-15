@@ -1,0 +1,143 @@
+68 mutations, 0 anchor problems
+accept-control: unmodified copy must pass ...
+control green; 68 mutations over 3 job(s)
+
+  [1/68] killed  : text addressed to the evaluator is not manipulation
+  [2/68] killed  : hidden characters are not caught
+  [3/68] killed  : changed bytes are read as the committed work
+  [4/68] killed  : an oversized item is read anyway
+  [5/68] killed  : a rehosted reference is not a copy
+  [6/68] killed  : the authorship mark is not required
+  [7/68] killed  : an approved work filed again is not a duplicate
+  [8/68] killed  : a declared late publication is on time
+  [9/68] killed  : prior work is always admitted
+  [10/68] killed  : too few cited sources are enough
+  [11/68] killed  : allowed prior work is still refused
+  [12/68] killed  : a copy needs to be shown from one side only
+  [13/68] killed  : a credited derivative needs no credit quoted
+  [14/68] killed  : self-dating needs no date
+  [15/68] killed  : a work dating itself late is on time
+  [16/68] killed  : a positive finding may quote a cited source instead of the work
+  [17/68] killed  : an off-topic work is in scope
+  [18/68] killed  : an unusable model answer is not inconclusive
+  [19/68] killed  : a copy is not a duplicate
+  [20/68] killed  : a derivative is original enough
+  [21/68] killed  : unverifiable relevance is enough
+  [22/68] killed  : undetermined originality is enough
+  [23/68] killed  : promotion is substantive
+  [24/68] killed  : an original work is a translation
+  [25/68] killed  : unverifiable substance is enough
+  [26/68] killed  : an unverifiable required criterion is enough
+  [27/68] killed  : a partly met required criterion passes
+  [28/68] killed  : a partly met criterion earns full weight
+  [29/68] killed  : the threshold score itself is rejected
+  [30/68] killed  : a band's minimum score is not in the band
+  [31/68] killed  : a copy keeps its bond
+  [32/68] killed  : the gate takes an integer for a boolean
+  [33/68] killed  : the gate does not re-ground quotes
+  [34/68] SURVIVED: the gate trusts the leader's code reason
+  [35/68] killed  : the gate does not apply the support rules
+  [36/68] killed  : the consequence is not compared
+  [37/68] SURVIVED: the authorship mark is not compared
+  [38/68] killed  : a model failure is ratified
+  [39/68] killed  : any error ratifies a transient one
+  [40/68] killed  : the other side's missing item stops an appeal
+  [41/68] killed  : an appellant may withdraw its own item
+  [42/68] killed  : a submission can be appealed twice
+  [43/68] killed  : an appeal after the window is heard
+  [44/68] killed  : a stranger can appeal
+  [45/68] killed  : an approval registers no digest
+  [46/68] killed  : finalization ignores the appeal window
+  [47/68] killed  : an overturned approval keeps the digest
+  [48/68] killed  : a forfeited bond is returned
+  [49/68] killed  : the pool over-reserves
+  [50/68] killed  : the per-wallet limit is not enforced
+  [51/68] killed  : the same work files twice in a campaign
+  [52/68] killed  : the owner can submit to its own campaign
+  [53/68] killed  : any value is a bond
+  [54/68] killed  : a submission closes before the stall window
+  [55/68] killed  : an evaluation runs after the stall window
+  [56/68] killed  : a stranger funds a pool
+  [57/68] killed  : an evaluation runs twice
+  [58/68] killed  : an open pool is reclaimed
+  [59/68] killed  : anyone supersedes a campaign
+  [60/68] killed  : a stranger activates a campaign
+  [61/68] killed  : withdraw pays twice
+  [62/68] killed  : unknown specification keys are accepted
+  [63/68] killed  : a weight need not be an integer
+  [64/68] killed  : required need not be a boolean
+  [65/68] killed  : the lowest band need not start at the threshold
+  [66/68] killed  : an IP literal is a host
+  [67/68] killed  : party text may address the evaluator
+  [68/68] killed  : a future publication is accepted
+
+killed:   changed bytes are read as the committed work
+killed:   an oversized item is read anyway
+killed:   text addressed to the evaluator is not manipulation
+killed:   hidden characters are not caught
+killed:   a rehosted reference is not a copy
+killed:   an approved work filed again is not a duplicate
+killed:   the authorship mark is not required
+killed:   a declared late publication is on time
+killed:   prior work is always admitted
+killed:   allowed prior work is still refused
+killed:   too few cited sources are enough
+killed:   a copy needs to be shown from one side only
+killed:   a credited derivative needs no credit quoted
+killed:   self-dating needs no date
+killed:   a positive finding may quote a cited source instead of the work
+killed:   an unusable model answer is not inconclusive
+killed:   a work dating itself late is on time
+killed:   an off-topic work is in scope
+killed:   unverifiable relevance is enough
+killed:   a copy is not a duplicate
+killed:   undetermined originality is enough
+killed:   a derivative is original enough
+killed:   an original work is a translation
+killed:   promotion is substantive
+killed:   unverifiable substance is enough
+killed:   an unverifiable required criterion is enough
+killed:   a partly met required criterion passes
+killed:   the threshold score itself is rejected
+killed:   a band's minimum score is not in the band
+killed:   a partly met criterion earns full weight
+killed:   a copy keeps its bond
+SURVIVED: the gate trusts the leader's code reason
+killed:   the gate takes an integer for a boolean
+killed:   the gate does not re-ground quotes
+killed:   the gate does not apply the support rules
+SURVIVED: the authorship mark is not compared
+killed:   the consequence is not compared
+killed:   a model failure is ratified
+killed:   any error ratifies a transient one
+killed:   the other side's missing item stops an appeal
+killed:   an appellant may withdraw its own item
+killed:   a submission can be appealed twice
+killed:   an appeal after the window is heard
+killed:   a stranger can appeal
+killed:   an overturned approval keeps the digest
+killed:   an approval registers no digest
+killed:   finalization ignores the appeal window
+killed:   a forfeited bond is returned
+killed:   the pool over-reserves
+killed:   the per-wallet limit is not enforced
+killed:   the same work files twice in a campaign
+killed:   the owner can submit to its own campaign
+killed:   any value is a bond
+killed:   a submission closes before the stall window
+killed:   an evaluation runs after the stall window
+killed:   an evaluation runs twice
+killed:   a stranger funds a pool
+killed:   a stranger activates a campaign
+killed:   an open pool is reclaimed
+killed:   anyone supersedes a campaign
+killed:   withdraw pays twice
+killed:   unknown specification keys are accepted
+killed:   a weight need not be an integer
+killed:   required need not be a boolean
+killed:   the lowest band need not start at the threshold
+killed:   an IP literal is a host
+killed:   a future publication is accepted
+killed:   party text may address the evaluator
+
+mutations: 66 killed, 2 survived, 0 anchor missing

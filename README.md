@@ -147,7 +147,8 @@ Details: [`docs/CONSENSUS.md`](docs/CONSENSUS.md).
 ## Originality: what it can and cannot tell
 
 - Byte-identical copies of a campaign reference or of any work already approved in the contract: decided by code.
-- Copies of a source the panel is shown - the campaign's references, the work's cited sources, a source added on appeal: judged by the panel, shown from both sides.
+- Word-for-word copies of a source the panel is shown - the campaign's references, the work's cited sources, a source added on appeal: judged by the panel, and a copy must quote a run of at least 12 consecutive words shared by both.
+- Shared subject matter, shared terms and paraphrase are not copies; uncredited paraphrase is not detected.
 - Copies of anything else on the web: not seen. The owner can appeal an approval with the copied source added.
 - Authorship: the work must carry the contributor's wallet address when the campaign requires it.
 - It is not plagiarism detection, and it does not claim to be.

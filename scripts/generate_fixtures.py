@@ -74,7 +74,7 @@ by Rosa Quintero, published 2026-08-20
 
 When a contract needs a judgment call, one validator goes first and proposes
 an answer, and the rest of the validators check that answer by doing the same
-job themselves.
+job themselves and then voting on whether to accept it.
 
 What makes this workable is that validators do not need identical text. They
 compare whether two answers mean the same thing under the rule the contract
@@ -181,7 +181,7 @@ I wrote this for people shipping their first Intelligent Contract.
 
 When a contract needs a judgment call, one validator goes first and proposes
 an answer, and the rest of the validators check that answer by doing the same
-job themselves.
+job themselves and then voting on whether to accept it.
 
 What makes this workable is that validators do not need identical text. They
 compare whether two answers mean the same thing under the rule the contract
@@ -546,9 +546,9 @@ CASES = [
                                                   "acceptable")),
          ORIGINALITY=subject("COPIED",
                              q("E1", "A set of other validators then repeat the same work "
-                                     "independently"),
+                                     "independently and vote on whether the leader's result"),
                              q("E2", "A set of other validators then repeat the same work "
-                                     "independently")),
+                                     "independently and vote on whether the leader's result")),
          LATE_DATING=subject("ABSENT"),
          C1=subject("SATISFIED", q("E1", "A leader validator proposes a result for the "
                                          "transaction")),
@@ -731,8 +731,10 @@ CASES = [
          SUBSTANTIVE=subject("SATISFIED", q("E1", "They compare whether two answers mean the "
                                                   "same thing")),
          ORIGINALITY=subject("COPIED",
-                             q("E1", "one validator goes first and proposes an answer"),
-                             q("E3", "one validator goes first and proposes an answer")),
+                             q("E1", "one validator goes first and proposes an answer, and "
+                                     "the rest of the validators check that answer"),
+                             q("E3", "one validator goes first and proposes an answer, and "
+                                     "the rest of the validators check that answer")),
          LATE_DATING=subject("ABSENT"),
          C1=subject("SATISFIED", q("E1", "the rest of the validators check that answer by "
                                          "doing the same job themselves")),

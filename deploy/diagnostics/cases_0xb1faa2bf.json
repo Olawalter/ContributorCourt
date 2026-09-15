@@ -1,0 +1,1812 @@
+{
+  "address": "0xB1fAa2bf3e1807fE1AB86fbe186452033c5a6566",
+  "campaigns": {
+    "docs": "CP-000003",
+    "explainer": "CP-000001",
+    "translation": "CP-000002"
+  },
+  "finished_at": "2026-09-15T18:10:17Z",
+  "network": "studionet",
+  "outcomes": {
+    "CC01": {
+      "author_mark": true,
+      "criterion_results": [
+        [
+          "RELEVANCE",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "SUBSTANTIVE",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "COPIED",
+          "PANEL"
+        ],
+        [
+          "LATE_DATING",
+          "ABSENT",
+          "PANEL"
+        ],
+        [
+          "C1",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "C2",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "C3",
+          "SATISFIED",
+          "PANEL"
+        ]
+      ],
+      "decided_by": "PANEL",
+      "evaluation_id": "EV-000001",
+      "expected": [
+        "APPROVED",
+        "MEETS_CRITERIA",
+        "GOLD"
+      ],
+      "held": false,
+      "hidden": [],
+      "markers": [],
+      "nodes": [
+        {
+          "mode": "leader",
+          "model": "policy:prd-minimax",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-qwen",
+          "stdout": "[DOWNGRADE] ORIGINALITY COPIED: support rule not met; raw [{'evidence_id': 'E1', 'text': \"GenLayer settles transactions that need judgment with a process called Optimistic Democracy. A leader validator proposes a result for the transaction. A set of other validators then repeat the same work indep\n[DISAGREE] consequence: bond_outcome mine='RETURN' theirs='FORFEIT'\n[MINE] INCONCLUSIVE ORIGINALITY_UNDETERMINED RELEVANCE=SATISFIED SUBSTANTIVE=SATISFIED ORIGINALITY=UNDETERMINED LATE_DATING=ABSENT C1=SATISFIED C2=SATISFIED C3=SATISFIED\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-gpt-5-4",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "google/gemini-3-flash-preview",
+          "stdout": "[DISAGREE] consequence: bond_outcome mine='RETURN' theirs='FORFEIT'\n[MINE] APPROVED MEETS_CRITERIA RELEVANCE=SATISFIED SUBSTANTIVE=SATISFIED ORIGINALITY=ORIGINAL LATE_DATING=ABSENT C1=SATISFIED C2=SATISFIED C3=SATISFIED\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-gpt-5-4",
+          "stdout": "",
+          "vote": "agree"
+        }
+      ],
+      "observed": [
+        "DUPLICATE_OR_DERIVATIVE",
+        "COPIED",
+        "NONE"
+      ],
+      "originality_band": "COPIED",
+      "overall_score": 100,
+      "record_digest": "fe7a99f94ea87f4f14a30ed93c35ac94362db0483bf3bfae78ea0421b8189f8f",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ]
+      ],
+      "submission_id": "SB-000001",
+      "tx": "0xc68ee646a458b4717c8d8b9bded73ab3d0ea388f9e1dbd4a7845ffb2bbb4495f"
+    },
+    "CC02": {
+      "author_mark": true,
+      "criterion_results": [
+        [
+          "RELEVANCE",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "SUBSTANTIVE",
+          "PARTIALLY_SATISFIED",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "COPIED",
+          "PANEL"
+        ],
+        [
+          "LATE_DATING",
+          "ABSENT",
+          "PANEL"
+        ],
+        [
+          "C1",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "C2",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "C3",
+          "PARTIALLY_SATISFIED",
+          "PANEL"
+        ]
+      ],
+      "decided_by": "PANEL",
+      "evaluation_id": "EV-000002",
+      "expected": [
+        "DUPLICATE_OR_DERIVATIVE",
+        "COPIED",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "DUPLICATE_OR_DERIVATIVE",
+        "COPIED",
+        "NONE"
+      ],
+      "originality_band": "COPIED",
+      "overall_score": 90,
+      "record_digest": "e6740c63e51e3bfabf952d016e549cafd64e6dcade699deba3545fc034c8aa5b",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ]
+      ],
+      "submission_id": "SB-000002",
+      "tx": "0x4b8cbc5707264d5d1c7ad201362c8866d299b153aa62beb86fe676e6ce22312a"
+    },
+    "CC03": {
+      "author_mark": true,
+      "criterion_results": [
+        [
+          "RELEVANCE",
+          "NOT_SATISFIED",
+          "PANEL"
+        ],
+        [
+          "SUBSTANTIVE",
+          "NOT_SATISFIED",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ORIGINAL",
+          "PANEL"
+        ],
+        [
+          "LATE_DATING",
+          "ABSENT",
+          "PANEL"
+        ],
+        [
+          "C1",
+          "NOT_SATISFIED",
+          "PANEL"
+        ],
+        [
+          "C2",
+          "NOT_SATISFIED",
+          "PANEL"
+        ],
+        [
+          "C3",
+          "NOT_SATISFIED",
+          "PANEL"
+        ]
+      ],
+      "decided_by": "PANEL",
+      "evaluation_id": "EV-000003",
+      "expected": [
+        "REJECTED",
+        "LOW_EFFORT",
+        "NONE"
+      ],
+      "held": false,
+      "hidden": [],
+      "markers": [],
+      "nodes": [
+        {
+          "mode": "leader",
+          "model": "policy:prd-grok",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": null,
+          "stdout": "",
+          "vote": "idle"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-qwen",
+          "stdout": "[DISAGREE] consequence: originality_band mine='UNDETERMINED' theirs='ORIGINAL'\n[MINE] OUT_OF_SCOPE OFF_TOPIC RELEVANCE=NOT_SATISFIED SUBSTANTIVE=NOT_SATISFIED ORIGINALITY=UNDETERMINED LATE_DATING=ABSENT C1=NOT_SATISFIED C2=NOT_SATISFIED C3=NOT_SATISFIED\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "google/gemini-3-flash-preview",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-gemini",
+          "stdout": "",
+          "vote": "agree"
+        }
+      ],
+      "observed": [
+        "OUT_OF_SCOPE",
+        "OFF_TOPIC",
+        "NONE"
+      ],
+      "originality_band": "ORIGINAL",
+      "overall_score": 0,
+      "record_digest": "57dead535fdea45ff640e6b852077ab74e1b0c75d23f7e2c018a3393e1b96071",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ]
+      ],
+      "submission_id": "SB-000003",
+      "tx": "0x4910a15f28f87a9b8486a9a8dc2db80826959698af3c4af4951f0110848104dd"
+    },
+    "CC04": {
+      "author_mark": true,
+      "criterion_results": [
+        [
+          "RELEVANCE",
+          "NOT_SATISFIED",
+          "PANEL"
+        ],
+        [
+          "SUBSTANTIVE",
+          "NOT_SATISFIED",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ORIGINAL",
+          "PANEL"
+        ],
+        [
+          "LATE_DATING",
+          "ABSENT",
+          "PANEL"
+        ],
+        [
+          "C1",
+          "NOT_SATISFIED",
+          "PANEL"
+        ],
+        [
+          "C2",
+          "NOT_SATISFIED",
+          "PANEL"
+        ],
+        [
+          "C3",
+          "NOT_SATISFIED",
+          "PANEL"
+        ]
+      ],
+      "decided_by": "PANEL",
+      "evaluation_id": "EV-000004",
+      "expected": [
+        "OUT_OF_SCOPE",
+        "OFF_TOPIC",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "OUT_OF_SCOPE",
+        "OFF_TOPIC",
+        "NONE"
+      ],
+      "originality_band": "ORIGINAL",
+      "overall_score": 0,
+      "record_digest": "bffc35a023d2eaf56ee52c24a360111c4ea14e194f8bf7da1ba5384da4ae4a4e",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ]
+      ],
+      "submission_id": "SB-000004",
+      "tx": "0x534463b7684f12773bb137a8cde5e1bb03c2b35c57de3938498695dfedd0271d"
+    },
+    "CC05": {
+      "author_mark": true,
+      "criterion_results": [
+        [
+          "RELEVANCE",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "SUBSTANTIVE",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "ORIGINALITY",
+          "UNDETERMINED",
+          "CODE"
+        ],
+        [
+          "LATE_DATING",
+          "UNDETERMINED",
+          "CODE"
+        ],
+        [
+          "C1",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "C2",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "C3",
+          "UNVERIFIABLE",
+          "CODE"
+        ]
+      ],
+      "decided_by": "CODE",
+      "evaluation_id": "EV-000005",
+      "expected": [
+        "REJECTED",
+        "MANIPULATION",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [
+        "E1"
+      ],
+      "observed": [
+        "REJECTED",
+        "MANIPULATION",
+        "NONE"
+      ],
+      "originality_band": "UNDETERMINED",
+      "overall_score": 0,
+      "record_digest": "8596e6a9c76414c6d933c043f634e8d9c0f51a3ad7bf4f17be209d2f24f811b3",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ]
+      ],
+      "submission_id": "SB-000005",
+      "tx": "0x3dfb85f84edf198396db5f9428d018be53dbadcb6a3686914e6f01b0c7b7aa46"
+    },
+    "CC06": {
+      "author_mark": true,
+      "criterion_results": [
+        [
+          "RELEVANCE",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "SUBSTANTIVE",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "ORIGINALITY",
+          "UNDETERMINED",
+          "CODE"
+        ],
+        [
+          "LATE_DATING",
+          "UNDETERMINED",
+          "CODE"
+        ],
+        [
+          "C1",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "C2",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "C3",
+          "UNVERIFIABLE",
+          "CODE"
+        ]
+      ],
+      "decided_by": "CODE",
+      "evaluation_id": "EV-000006",
+      "expected": [
+        "INSUFFICIENT_EVIDENCE",
+        "HIDDEN_TEXT",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [
+        "E1"
+      ],
+      "markers": [],
+      "observed": [
+        "INSUFFICIENT_EVIDENCE",
+        "HIDDEN_TEXT",
+        "NONE"
+      ],
+      "originality_band": "UNDETERMINED",
+      "overall_score": 0,
+      "record_digest": "7cc52c3a09c14a1d1dc5a30a2a21c2a62c9bb99abc0a2b926bb779a4abc89490",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ]
+      ],
+      "submission_id": "SB-000006",
+      "tx": "0xaa220e8c83aae50722b49724c08e60980d3ac12ca55cd17c26b3b1710838731e"
+    },
+    "CC07": {
+      "author_mark": true,
+      "criterion_results": [
+        [
+          "RELEVANCE",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "SUBSTANTIVE",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "COPIED",
+          "PANEL"
+        ],
+        [
+          "LATE_DATING",
+          "PRESENT",
+          "PANEL"
+        ],
+        [
+          "C1",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "C2",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "C3",
+          "SATISFIED",
+          "PANEL"
+        ]
+      ],
+      "decided_by": "PANEL",
+      "evaluation_id": "EV-000007",
+      "expected": [
+        "LATE_SUBMISSION",
+        "DATED_AFTER_DEADLINE",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "LATE_SUBMISSION",
+        "DATED_AFTER_DEADLINE",
+        "NONE"
+      ],
+      "originality_band": "COPIED",
+      "overall_score": 100,
+      "record_digest": "3ec3d01780b749a96bbff4abcfb1e1fe64ccf03f5e9532c1d29068f290b8530b",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ]
+      ],
+      "submission_id": "SB-000007",
+      "tx": "0xb990870b5bb385b28f3f5b98a549ed30e9a7e38c308ed2c4bb951ce1a47f69d5"
+    },
+    "CC08": {
+      "author_mark": false,
+      "criterion_results": [
+        [
+          "RELEVANCE",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "SUBSTANTIVE",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "ORIGINALITY",
+          "UNDETERMINED",
+          "CODE"
+        ],
+        [
+          "LATE_DATING",
+          "UNDETERMINED",
+          "CODE"
+        ],
+        [
+          "C1",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "C2",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "C3",
+          "UNVERIFIABLE",
+          "CODE"
+        ]
+      ],
+      "decided_by": "CODE",
+      "evaluation_id": "EV-000008",
+      "expected": [
+        "INSUFFICIENT_EVIDENCE",
+        "AUTHOR_MARK_MISSING",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "INSUFFICIENT_EVIDENCE",
+        "AUTHOR_MARK_MISSING",
+        "NONE"
+      ],
+      "originality_band": "UNDETERMINED",
+      "overall_score": 0,
+      "record_digest": "c99076b47dabf3904e7231ce5fca6bd5acaa7557eb396dcc1011a56292fc5063",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ]
+      ],
+      "submission_id": "SB-000008",
+      "tx": "0xadcac8b497f4203d7ec77b2f2a8d57f1ebebe4fb73203a648733780f70d9aa69"
+    },
+    "CC09": {
+      "author_mark": true,
+      "criterion_results": [
+        [
+          "RELEVANCE",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "SUBSTANTIVE",
+          "PARTIALLY_SATISFIED",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ATTRIBUTED_DERIVATIVE",
+          "PANEL"
+        ],
+        [
+          "LATE_DATING",
+          "ABSENT",
+          "PANEL"
+        ],
+        [
+          "C1",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "C2",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "C3",
+          "PARTIALLY_SATISFIED",
+          "PANEL"
+        ]
+      ],
+      "decided_by": "PANEL",
+      "evaluation_id": "EV-000009",
+      "expected": [
+        "DUPLICATE_OR_DERIVATIVE",
+        "DERIVATIVE_NOT_ALLOWED",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "DUPLICATE_OR_DERIVATIVE",
+        "DERIVATIVE_NOT_ALLOWED",
+        "NONE"
+      ],
+      "originality_band": "ATTRIBUTED_DERIVATIVE",
+      "overall_score": 90,
+      "record_digest": "d927a191c205f7384368092943709950f450cbcb9ac506edd19b0f5ec44589e9",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ]
+      ],
+      "submission_id": "SB-000009",
+      "tx": "0x18b9a09c7c638026581313724356b8f95bf24d7e9de25406ae231ee6a05f4ad7"
+    },
+    "CC10": {
+      "author_mark": true,
+      "criterion_results": [
+        [
+          "RELEVANCE",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "SUBSTANTIVE",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ATTRIBUTED_DERIVATIVE",
+          "PANEL"
+        ],
+        [
+          "LATE_DATING",
+          "ABSENT",
+          "PANEL"
+        ],
+        [
+          "C1",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "C2",
+          "SATISFIED",
+          "PANEL"
+        ]
+      ],
+      "decided_by": "PANEL",
+      "evaluation_id": "EV-000010",
+      "expected": [
+        "APPROVED",
+        "MEETS_CRITERIA",
+        "FULL"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "APPROVED",
+        "MEETS_CRITERIA",
+        "FULL"
+      ],
+      "originality_band": "ATTRIBUTED_DERIVATIVE",
+      "overall_score": 100,
+      "record_digest": "7c597d8d08f1763cbf13c10a470e967d470124db91a8af1d3c3a86f777000de4",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ]
+      ],
+      "submission_id": "SB-000010",
+      "tx": "0x5da48996ef1fcdf227fe8c84ef2f84ef37bf5ceda7e57103e71640710e97dfd7"
+    },
+    "CC11": {
+      "author_mark": false,
+      "criterion_results": [
+        [
+          "RELEVANCE",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "SUBSTANTIVE",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "ORIGINALITY",
+          "UNDETERMINED",
+          "CODE"
+        ],
+        [
+          "LATE_DATING",
+          "UNDETERMINED",
+          "CODE"
+        ],
+        [
+          "C1",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "C2",
+          "UNVERIFIABLE",
+          "CODE"
+        ]
+      ],
+      "decided_by": "CODE",
+      "evaluation_id": "EV-000011",
+      "expected": [
+        "DUPLICATE_OR_DERIVATIVE",
+        "REFERENCE_COPY",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "DUPLICATE_OR_DERIVATIVE",
+        "REFERENCE_COPY",
+        "NONE"
+      ],
+      "originality_band": "UNDETERMINED",
+      "overall_score": 0,
+      "record_digest": "d860efd983d6d72bdaccb4edad0dd0b909b38173f250dee10e868fd8b48baaff",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ]
+      ],
+      "submission_id": "SB-000011",
+      "tx": "0x85a003acdb8042a4d1f11555bb02506f9a07b798fd30762b5eb4d2962f8159e9"
+    },
+    "CC12": {
+      "author_mark": true,
+      "criterion_results": [
+        [
+          "RELEVANCE",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "SUBSTANTIVE",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ATTRIBUTED_DERIVATIVE",
+          "PANEL"
+        ],
+        [
+          "LATE_DATING",
+          "ABSENT",
+          "PANEL"
+        ],
+        [
+          "C1",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "C2",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "C3",
+          "SATISFIED",
+          "PANEL"
+        ]
+      ],
+      "decided_by": "PANEL",
+      "evaluation_id": "EV-000012",
+      "expected": [
+        "APPROVED",
+        "MEETS_CRITERIA",
+        "DOC"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "APPROVED",
+        "MEETS_CRITERIA",
+        "DOC"
+      ],
+      "originality_band": "ATTRIBUTED_DERIVATIVE",
+      "overall_score": 100,
+      "record_digest": "15d3eb025c4e2b56531baeb0bd4c417a788a2835b0deed08953b2b842b156cc7",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ],
+        [
+          "E3",
+          "EXAMINED"
+        ]
+      ],
+      "submission_id": "SB-000012",
+      "tx": "0x9be27c348d0be0467b1b1f22010f8c13147648c4c5b4aa0c45bf095735427ee6"
+    },
+    "CC13": {
+      "author_mark": true,
+      "criterion_results": [
+        [
+          "RELEVANCE",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "SUBSTANTIVE",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "ORIGINALITY",
+          "UNDETERMINED",
+          "CODE"
+        ],
+        [
+          "LATE_DATING",
+          "UNDETERMINED",
+          "CODE"
+        ],
+        [
+          "C1",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "C2",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "C3",
+          "UNVERIFIABLE",
+          "CODE"
+        ]
+      ],
+      "decided_by": "CODE",
+      "evaluation_id": "EV-000013",
+      "expected": [
+        "INSUFFICIENT_EVIDENCE",
+        "SUPPORTING_SOURCES_SHORT",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "INSUFFICIENT_EVIDENCE",
+        "SUPPORTING_SOURCES_SHORT",
+        "NONE"
+      ],
+      "originality_band": "UNDETERMINED",
+      "overall_score": 0,
+      "record_digest": "7f69e52fabae656ac9ce8949bb2100f44afcea4a5444eb4b7eee5878b0fae55e",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ]
+      ],
+      "submission_id": "SB-000013",
+      "tx": "0xf2db718c08413051a01494e942e3d5eb0c3a0ef44977287c46064fa4f6a3b59a"
+    },
+    "CC14": {
+      "author_mark": true,
+      "criterion_results": [
+        [
+          "RELEVANCE",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "SUBSTANTIVE",
+          "SATISFIED",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ORIGINAL",
+          "PANEL"
+        ],
+        [
+          "LATE_DATING",
+          "ABSENT",
+          "PANEL"
+        ],
+        [
+          "C1",
+          "PARTIALLY_SATISFIED",
+          "PANEL"
+        ],
+        [
+          "C2",
+          "PARTIALLY_SATISFIED",
+          "PANEL"
+        ],
+        [
+          "C3",
+          "SATISFIED",
+          "PANEL"
+        ]
+      ],
+      "decided_by": "PANEL",
+      "evaluation_id": "EV-000014",
+      "expected": [
+        "APPROVED",
+        "MEETS_CRITERIA",
+        "SILVER"
+      ],
+      "held": false,
+      "hidden": [],
+      "markers": [],
+      "nodes": [
+        {
+          "mode": "leader",
+          "model": "policy:prd-glm",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-kimi",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": null,
+          "stdout": "",
+          "vote": "idle"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-gemma",
+          "stdout": "[DISAGREE] consequence: reason_code mine='MEETS_CRITERIA' theirs='REQUIRED_CRITERION_FAILED'\n[MINE] APPROVED MEETS_CRITERIA RELEVANCE=SATISFIED SUBSTANTIVE=SATISFIED ORIGINALITY=ORIGINAL LATE_DATING=ABSENT C1=SATISFIED C2=SATISFIED C3=SATISFIED\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-minimax",
+          "stdout": "",
+          "vote": "agree"
+        }
+      ],
+      "observed": [
+        "REJECTED",
+        "REQUIRED_CRITERION_FAILED",
+        "NONE"
+      ],
+      "originality_band": "ORIGINAL",
+      "overall_score": 60,
+      "record_digest": "77912f0c5900e097f3ca98f636f793a7ad7d10fc876ad8e2c5983ab3266ad474",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ]
+      ],
+      "submission_id": "SB-000014",
+      "tx": "0xdc1a446e4a43c31ef51911af4139cc383066d7ac5fd90a92bfd899f10cf0e187"
+    }
+  },
+  "pending": {},
+  "phase": "cases",
+  "raw_base": "https://raw.githubusercontent.com/Olawalter/ContributorCourt/4a88111a9e09fae8bb9c5f9bef8667d65dbf0f7b/fixtures/",
+  "refused_filings": {
+    "submit:CC09": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "submit_contribution",
+      "returned": "{'readable': '\"RETURNED: the campaign\\'s pool cannot reserve another reward\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CC09",
+      "tx": "0xd7d49b0cf2e8451936a5aa2560d3c127e6fd5b869a929fd8d1ff0427366f9873",
+      "value_atto": "5000000000000000",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    }
+  },
+  "started_at": "2026-09-15T17:26:33Z",
+  "steps": {
+    "activate:docs": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "activate_campaign",
+      "returned": "{'readable': '\"OPEN\"'}",
+      "status": "FINALIZED",
+      "step": "activate:docs",
+      "tx": "0x8509f3287a79571b3e797f18d51939e65dd96acfb1c0a9999a22065489474d52",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "activate:explainer": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "activate_campaign",
+      "returned": "{'readable': '\"OPEN\"'}",
+      "status": "FINALIZED",
+      "step": "activate:explainer",
+      "tx": "0x90109b169f05eaf1cfa4fbc5380f00299b034cfe3c27dd6683a14f4e924acdba",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "activate:translation": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "activate_campaign",
+      "returned": "{'readable': '\"OPEN\"'}",
+      "status": "FINALIZED",
+      "step": "activate:translation",
+      "tx": "0x15cbbda741090cb10d303c7ad5e71ac41185b393edc9654e0fe690377b602b3f",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "create:docs": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_campaign",
+      "returned": "{'readable': '\"CP-000003\"'}",
+      "status": "FINALIZED",
+      "step": "create:docs",
+      "tx": "0x5938aa81409449e4de1185d2891a6e46d553e80f4f397c0b313d7a8d4641f87d",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "create:explainer": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_campaign",
+      "returned": "{'readable': '\"CP-000001\"'}",
+      "status": "FINALIZED",
+      "step": "create:explainer",
+      "tx": "0xca523d945165dc01b5fa20924fd7d7ec1b502cd0990f0683ca6957b05f4e95d1",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "create:translation": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_campaign",
+      "returned": "{'readable': '\"CP-000002\"'}",
+      "status": "FINALIZED",
+      "step": "create:translation",
+      "tx": "0xffe1fd7f6f3dbb666e298458d7ab59fb301b242c7d0bdae54616902c7ca793a2",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "evaluate:CC01": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000001\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CC01",
+      "tx": "0xc68ee646a458b4717c8d8b9bded73ab3d0ea388f9e1dbd4a7845ffb2bbb4495f",
+      "votes": [
+        "AGREE",
+        "DISAGREE",
+        "AGREE",
+        "DISAGREE",
+        "AGREE"
+      ]
+    },
+    "evaluate:CC02": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000002\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CC02",
+      "tx": "0x4b8cbc5707264d5d1c7ad201362c8866d299b153aa62beb86fe676e6ce22312a",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "evaluate:CC03": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000003\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CC03",
+      "tx": "0x4910a15f28f87a9b8486a9a8dc2db80826959698af3c4af4951f0110848104dd",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "DISAGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "evaluate:CC04": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000004\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CC04",
+      "tx": "0x534463b7684f12773bb137a8cde5e1bb03c2b35c57de3938498695dfedd0271d",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "evaluate:CC05": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000005\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CC05",
+      "tx": "0x3dfb85f84edf198396db5f9428d018be53dbadcb6a3686914e6f01b0c7b7aa46",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "evaluate:CC06": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000006\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CC06",
+      "tx": "0xaa220e8c83aae50722b49724c08e60980d3ac12ca55cd17c26b3b1710838731e",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "evaluate:CC07": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000007\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CC07",
+      "tx": "0xb990870b5bb385b28f3f5b98a549ed30e9a7e38c308ed2c4bb951ce1a47f69d5",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "evaluate:CC08": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000008\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CC08",
+      "tx": "0xadcac8b497f4203d7ec77b2f2a8d57f1ebebe4fb73203a648733780f70d9aa69",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "evaluate:CC09": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000009\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CC09",
+      "tx": "0x18b9a09c7c638026581313724356b8f95bf24d7e9de25406ae231ee6a05f4ad7",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "evaluate:CC10": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000010\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CC10",
+      "tx": "0x5da48996ef1fcdf227fe8c84ef2f84ef37bf5ceda7e57103e71640710e97dfd7",
+      "votes": [
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "evaluate:CC11": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000011\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CC11",
+      "tx": "0x85a003acdb8042a4d1f11555bb02506f9a07b798fd30762b5eb4d2962f8159e9",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "evaluate:CC12": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000012\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CC12",
+      "tx": "0x9be27c348d0be0467b1b1f22010f8c13147648c4c5b4aa0c45bf095735427ee6",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "evaluate:CC13": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000013\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CC13",
+      "tx": "0xf2db718c08413051a01494e942e3d5eb0c3a0ef44977287c46064fa4f6a3b59a",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "evaluate:CC14": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000014\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CC14",
+      "tx": "0xdc1a446e4a43c31ef51911af4139cc383066d7ac5fd90a92bfd899f10cf0e187",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "DISAGREE",
+        "AGREE"
+      ]
+    },
+    "fund:docs": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "fund_campaign",
+      "returned": "{'readable': '\"70000000000000000\"'}",
+      "status": "FINALIZED",
+      "step": "fund:docs",
+      "tx": "0xec70121adb7a6c8e905d8d2ca3168ffb5fb629cb4c2f268a5c7a6bc29c83cdd8",
+      "value_atto": "70000000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "fund:explainer": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "fund_campaign",
+      "returned": "{'readable': '\"400000000000000000\"'}",
+      "status": "FINALIZED",
+      "step": "fund:explainer",
+      "tx": "0x1557486be1e91dbeaf1555b96f4ea576b18f03345fe4351abdaa2e1cd643010d",
+      "value_atto": "400000000000000000",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "fund:explainer:520000000000000000": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "fund_campaign",
+      "returned": "{'readable': '\"520000000000000000\"'}",
+      "status": "FINALIZED",
+      "step": "fund:explainer:520000000000000000",
+      "tx": "0xdbeb6bf1efe945e0ca3edef85ba7ee05ba0fcbf7bb4052cb9070893466ca6d09",
+      "value_atto": "120000000000000000",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "fund:translation": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "fund_campaign",
+      "returned": "{'readable': '\"50000000000000000\"'}",
+      "status": "FINALIZED",
+      "step": "fund:translation",
+      "tx": "0x220f01c552928286aaf025f10fa01912c3fe6e08444da685606d43ce72294f5d",
+      "value_atto": "50000000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "submit:CC01": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "submit_contribution",
+      "returned": "{'readable': '\"SB-000001\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CC01",
+      "tx": "0xdc93b5eefaffb42a6edc8199818ae004bd81d2612f23635e085d02d78b9c2c1c",
+      "value_atto": "5000000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "submit:CC02": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "submit_contribution",
+      "returned": "{'readable': '\"SB-000002\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CC02",
+      "tx": "0xc320dc2f1d567bf363533b038463d15d540ff5052938d053d8b10d56a37445dc",
+      "value_atto": "5000000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "submit:CC03": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "submit_contribution",
+      "returned": "{'readable': '\"SB-000003\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CC03",
+      "tx": "0x65902210faf3cf6025fcb036c52f21cb96aa65e24491c398d97fa0141fc07121",
+      "value_atto": "5000000000000000",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "submit:CC04": {
+      "accepted": true,
+      "actor": "dave",
+      "leader_execution": "SUCCESS",
+      "method": "submit_contribution",
+      "returned": "{'readable': '\"SB-000004\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CC04",
+      "tx": "0x0bd60274fdfb47e25fd1e53dc3a2b66386a9d21b7a7b3c8a49e3486cdeeb1229",
+      "value_atto": "5000000000000000",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "submit:CC05": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "submit_contribution",
+      "returned": "{'readable': '\"SB-000005\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CC05",
+      "tx": "0x0e6826a3816d9230a26db4a6d412195d143f31d7ebc88005c9996bfd5fee51b2",
+      "value_atto": "5000000000000000",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "submit:CC06": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "submit_contribution",
+      "returned": "{'readable': '\"SB-000006\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CC06",
+      "tx": "0xf16c2026334b994fa13166bfe598fb279efb85a10871dfd1200b7658b3029b90",
+      "value_atto": "5000000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "submit:CC07": {
+      "accepted": true,
+      "actor": "dave",
+      "leader_execution": "SUCCESS",
+      "method": "submit_contribution",
+      "returned": "{'readable': '\"SB-000007\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CC07",
+      "tx": "0x816cd5d75ef6bc390b0992fb4cbd683fc0582ec408f9754bbad5efe9fffac395",
+      "value_atto": "5000000000000000",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "submit:CC08": {
+      "accepted": true,
+      "actor": "dave",
+      "leader_execution": "SUCCESS",
+      "method": "submit_contribution",
+      "returned": "{'readable': '\"SB-000008\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CC08",
+      "tx": "0xdf163c2a6e66bf3a42738ede5e590b7dc5717a849bc41bc4ab57b2d8cf40070f",
+      "value_atto": "5000000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "submit:CC09": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "submit_contribution",
+      "returned": "{'readable': '\"SB-000009\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CC09",
+      "tx": "0x54b6ce4ea476bd5bac4e065d66bcf2e9ca0240641d2ec22f3aeb6fddd9a8aff9",
+      "value_atto": "5000000000000000",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "submit:CC10": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "submit_contribution",
+      "returned": "{'readable': '\"SB-000010\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CC10",
+      "tx": "0x8b6a02e7ccad8ed3f98697f758c0408408408c68ff43ff8dc102e3dad6a3b597",
+      "value_atto": "5000000000000000",
+      "votes": [
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "submit:CC11": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "submit_contribution",
+      "returned": "{'readable': '\"SB-000011\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CC11",
+      "tx": "0x62f4bcf61b6506d82464fab8a480eb0181ef7b46dac0694722eccb824fd80593",
+      "value_atto": "5000000000000000",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "submit:CC12": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "submit_contribution",
+      "returned": "{'readable': '\"SB-000012\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CC12",
+      "tx": "0x8c0ee70845456e9c5a4c977cdfd0ad6e7e59ae528b91e0a32d4ac3bafccd1414",
+      "value_atto": "5000000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
+    },
+    "submit:CC13": {
+      "accepted": true,
+      "actor": "dave",
+      "leader_execution": "SUCCESS",
+      "method": "submit_contribution",
+      "returned": "{'readable': '\"SB-000013\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CC13",
+      "tx": "0xb95c95b40fc652d62972a6dd79e33c18cc44abd0689c3de1eba4531b42d3cb77",
+      "value_atto": "5000000000000000",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "submit:CC14": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "submit_contribution",
+      "returned": "{'readable': '\"SB-000014\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CC14",
+      "tx": "0xf637714bc18a4af60e2dbfd28cd037fb81deef6a5c5929c199a173a5d01f8d3f",
+      "value_atto": "5000000000000000",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    }
+  },
+  "submissions": {
+    "CC01": "SB-000001",
+    "CC02": "SB-000002",
+    "CC03": "SB-000003",
+    "CC04": "SB-000004",
+    "CC05": "SB-000005",
+    "CC06": "SB-000006",
+    "CC07": "SB-000007",
+    "CC08": "SB-000008",
+    "CC09": "SB-000009",
+    "CC10": "SB-000010",
+    "CC11": "SB-000011",
+    "CC12": "SB-000012",
+    "CC13": "SB-000013",
+    "CC14": "SB-000014"
+  },
+  "summary": {
+    "held": [
+      "CC02",
+      "CC04",
+      "CC05",
+      "CC06",
+      "CC07",
+      "CC08",
+      "CC09",
+      "CC10",
+      "CC11",
+      "CC12",
+      "CC13"
+    ],
+    "not_held": [
+      "CC01",
+      "CC03",
+      "CC14"
+    ]
+  }
+}

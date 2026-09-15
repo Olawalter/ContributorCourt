@@ -1,0 +1,15 @@
+69 mutations, 0 anchor problems
+accept-control: unmodified copy must pass ...
+control green; 4 mutations over 3 job(s)
+
+  [1/4] killed  : two quotes on one subject are a copy
+  [2/4] killed  : a copy needs thirteen shared words
+  [3/4] SURVIVED: the gate trusts the leader's code reason
+  [4/4] killed  : the authorship mark is not compared
+
+killed:   two quotes on one subject are a copy
+killed:   a copy needs thirteen shared words
+SURVIVED: the gate trusts the leader's code reason
+killed:   the authorship mark is not compared
+
+mutations: 3 killed, 1 survived, 0 anchor missing

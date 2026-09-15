@@ -63,6 +63,7 @@ QUOTE_MIN = 8
 QUOTE_CAP = 240
 QUOTE_SEPARATORS = ("\u2026", "...", "\n", ", ")
 MAX_QUOTES = 3
+COPY_RUN_WORDS = 12               # a copy repeats at least this many consecutive words
 FETCH_BYTES_CAP = 12000           # every examined byte fits the prompt
 MAX_CRITERIA = 6
 MAX_BANDS = 4
@@ -246,9 +247,11 @@ subject. A quote must be copied word for word from the item it names.
 
 E1 is always the submitted work. The subjects:
 
-RELEVANCE - is E1 about DATA.campaign.required_task?
-  SATISFIED: E1 addresses the task. PARTIALLY_SATISFIED: it addresses it in
-  part. NOT_SATISFIED: it is about something else. UNVERIFIABLE: the text
+RELEVANCE - is E1 about the subject of DATA.campaign.required_task?
+  This asks only what E1 is about, not how well it does the task: a thin or
+  promotional piece about the right subject is still about it.
+  SATISFIED: E1 is about that subject. PARTIALLY_SATISFIED: only part of E1
+  is. NOT_SATISFIED: E1 is about a different subject. UNVERIFIABLE: the text
   cannot show it. SATISFIED and PARTIALLY_SATISFIED must quote E1.
 
 SUBSTANTIVE - does E1 contain real work a reader can use?
@@ -258,13 +261,15 @@ SUBSTANTIVE - does E1 contain real work a reader can use?
   SATISFIED and PARTIALLY_SATISFIED must quote E1.
 
 ORIGINALITY - compare E1 with every other item shown.
-  ORIGINAL: E1 is not substantially based on any item shown.
-  ATTRIBUTED_DERIVATIVE: E1 is substantially based on one item shown (a
-  translation, summary or adaptation) AND E1 itself credits that source by
-  name or link; quote the credit from E1.
-  COPIED: E1 reproduces substantial passages of an item shown word for word,
-  or adapts one without crediting it; quote the passage from E1 AND the
-  matching passage from that item.
+  ORIGINAL: E1 is written in its own words. Covering the same subject, the
+  same facts or the same terms as an item shown is still ORIGINAL.
+  ATTRIBUTED_DERIVATIVE: E1 says it is a translation, summary or adaptation of
+  an item shown AND credits that item by name or link; quote the credit
+  from E1.
+  COPIED: E1 repeats a passage of an item shown word for word - at least
+  twelve consecutive words, the same words in the same order. Quote that
+  passage from E1 AND the identical passage from that item. Similar wording,
+  shared phrases and paraphrase are not COPIED.
   UNDETERMINED: you cannot tell.
   A credited translation of a reference source is ATTRIBUTED_DERIVATIVE.
 
@@ -910,17 +915,37 @@ def _has_year(text: str) -> bool:
     return False
 
 
+def _shared_run(a: str, b: str) -> int:
+    """The longest run of consecutive words two quotes have in common."""
+    left = _word_tokens(a)
+    right = _word_tokens(b)
+    best = 0
+    previous = [0] * (len(right) + 1)
+    for i in range(1, len(left) + 1):
+        current = [0] * (len(right) + 1)
+        for j in range(1, len(right) + 1):
+            if left[i - 1] == right[j - 1]:
+                current[j] = previous[j - 1] + 1
+                if current[j] > best:
+                    best = current[j]
+        previous = current
+    return best
+
+
 def _support_met(subject_id: str, state: str, quotes: list, roles: dict) -> bool:
     """What a decided state must quote. A finding in the contributor's favour
     rests on the work itself (E1), never on a source it cites; a copy is shown
-    from both sides, the work and the item it copies; a self-dating finding
-    quotes the date."""
+    from both sides as the same words - a run of COPY_RUN_WORDS consecutive
+    words quoted from the work and from the item it copies, so two texts on one
+    subject sharing its terms are never a copy; a self-dating finding quotes
+    the date."""
     from_primary = [q for q in quotes if q["evidence_id"] == "E1"]
     if subject_id == SUBJECT_ORIGINALITY:
         if state == COPIED:
             others = [q for q in quotes if roles.get(q["evidence_id"]) in
                       (ROLE_SUPPORTING, ROLE_REFERENCE)]
-            return len(from_primary) > 0 and len(others) > 0
+            return any(_shared_run(a["text"], b["text"]) >= COPY_RUN_WORDS
+                       for a in from_primary for b in others)
         if state == ATTRIBUTED_DERIVATIVE:
             return len(from_primary) > 0
         return True
