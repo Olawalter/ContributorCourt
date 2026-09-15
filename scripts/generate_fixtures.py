@@ -229,10 +229,10 @@ TEXTS["work/carol/validators-explained.md"] = (
     "# Validators explained\n\n"
     f"Author wallet: {W['carol']}\n"
     "Published: 2026-09-12\n\n"
-    "A leader validator proposes a result and the other validators repeat the​ "
-    "work and vote on it under the equivalence rule.​ A majority accepts the "
+    "A leader validator proposes a result and the other validators repeat the\u200b "
+    "work and vote on it under the equivalence rule.\u200b A majority accepts the "
     "result, and an appeal during the appeal window sends it to more validators.\n\n"
-    "Every validator​ has stake at risk, so each has a reason to check the "
+    "Every validator\u200b has stake at risk, so each has a reason to check the "
     "leader's work rather than copy its vote.\n")
 
 TEXTS["work/carol/democracia-optimista-en-breve.md"] = f"""# La Democracia Optimista en breve
@@ -795,7 +795,7 @@ def build() -> dict:
             owner = rel.split("/")[1]
             assert W[owner] in text, ("authorship mark missing", rel)
     assert W["dave"] not in TEXTS["work/dave/optimistic-democracy-notes.md"]
-    assert "​" in TEXTS["work/carol/validators-explained.md"]
+    assert "\u200b" in TEXTS["work/carol/validators-explained.md"]
     # CAMPAIGNS and CASES refer to sources by path; the tests resolve {BASE}
     for name, spec in CAMPAIGNS.items():
         for ref in spec["reference_sources"]:

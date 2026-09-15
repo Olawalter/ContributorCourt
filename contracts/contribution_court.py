@@ -61,7 +61,7 @@ URL_CAP = 300
 BAND_LABEL_CAP = 16
 QUOTE_MIN = 8
 QUOTE_CAP = 240
-QUOTE_SEPARATORS = ("…", "...", "\n", ", ")
+QUOTE_SEPARATORS = ("\u2026", "...", "\n", ", ")
 MAX_QUOTES = 3
 FETCH_BYTES_CAP = 12000           # every examined byte fits the prompt
 MAX_CRITERIA = 6
@@ -224,9 +224,9 @@ EVALUATOR_MARKERS = (
     "award this submission", "evaluate this submission as")
 # characters that hide or reorder text for a human reader while a parser sees it;
 # the zero-width joiner is left out because emoji sequences use it
-HIDDEN_CHARACTERS = ("​", "‌", "‎", "‏", "‪", "‫", "‬",
-                     "‭", "‮", "⁠", "⁡", "⁢", "⁣", "⁤",
-                     "⁦", "⁧", "⁨", "⁩")
+HIDDEN_CHARACTERS = ("\u200b", "\u200c", "\u200e", "\u200f", "\u202a", "\u202b", "\u202c",
+                     "\u202d", "\u202e", "\u2060", "\u2061", "\u2062", "\u2063", "\u2064",
+                     "\u2066", "\u2067", "\u2068", "\u2069")
 
 PANEL_HEADER = """ContributionCourt panel.
 
@@ -431,8 +431,8 @@ def _evaluator_hits(text: str) -> bool:
 def _hidden_hits(text: str) -> bool:
     """Characters that hide or reorder text from a human reader. A byte-order
     mark at the very start is ordinary."""
-    body = text[1:] if text.startswith("﻿") else text
-    return any(ch in body for ch in HIDDEN_CHARACTERS) or "﻿" in body
+    body = text[1:] if text.startswith("\ufeff") else text
+    return any(ch in body for ch in HIDDEN_CHARACTERS) or "\ufeff" in body
 
 
 def _text_error(value, cap: int, label: str, allow_newlines: bool, required: bool = True) -> str:
@@ -871,7 +871,7 @@ def _grounds_in_order(haystack: list, text: str) -> bool:
     nothing."""
     position = 0
     parts = 0
-    for part in text.replace("…", "...").split("..."):
+    for part in text.replace("\u2026", "...").split("..."):
         words = _word_tokens(part)
         if len(words) == 0:
             continue

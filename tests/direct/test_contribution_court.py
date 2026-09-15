@@ -110,3 +110,12 @@ def test_the_translation_campaign_rewards_a_credited_translation(court, direct_v
 
 def test_stage_serves_every_fixture(direct_vm, court):
     stage(direct_vm)
+
+
+def test_the_deployable_source_is_ascii_with_lf_endings():
+    """The deployed source is compared byte for byte with this file; an
+    invisible character or a CR would make that comparison lie to a reader."""
+    from tests.direct.support import ROOT, CONTRACT
+    raw = (ROOT / CONTRACT).read_bytes()
+    assert b"\r" not in raw and all(b < 128 for b in raw)
+    assert raw.startswith(b"# v0.1.0\n# { \"Depends\": \"py-genlayer:") and b"\n\n# NOTE" in raw
