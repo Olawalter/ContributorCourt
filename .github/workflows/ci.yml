@@ -1,0 +1,32 @@
+# The required gate: lint, the fixtures regenerate byte for byte, the Direct
+# Mode suite, and the GenVM linter on the deployable contract.
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  required:
+    name: lint + fixtures + direct tests + genvm-lint check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/genvm-linter
+            ~/.cache/gltest-direct
+          key: genvm-bundle-v0.3.0-rc7
+      - run: python -m pip install --upgrade pip
+      - run: pip install -r requirements-test.txt
+      - run: ruff check .
+      - run: python scripts/generate_fixtures.py --check
+      # gltest 0.29.2 asks for an asset name the current GenVM releases no
+      # longer publish; seed both caches with the verified bundle first.
+      - run: python scripts/fetch_genvm_bundle.py
+      - run: python -m pytest tests/direct -q
+      - run: genvm-lint check contracts/contribution_court.py --json

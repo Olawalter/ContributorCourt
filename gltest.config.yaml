@@ -1,0 +1,15 @@
+networks:
+  default: studionet
+
+  localnet:
+    url: "http://127.0.0.1:4000/api"
+
+  # Hosted StudioNet. Leave this block empty in the committed file: gltest
+  # interpolates environment references at config load, so an accounts entry here
+  # would break the offline Direct Mode suite for anyone without a .env.
+  studionet: {}
+
+paths:
+  contracts: "contracts"
+
+environment: .env

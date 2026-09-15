@@ -1,0 +1,7 @@
+-r requirements.txt
+pytest==9.1.1
+# The SDK crosses the nondeterministic boundary through cloudpickle; the
+# suite's pickling check (check_pickling) needs it locally. GenVM ships its
+# own copy on-chain.
+cloudpickle==3.1.2
+ruff==0.16.7

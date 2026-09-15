@@ -1,0 +1,20 @@
+[project]
+name = "contribution-court"
+version = "0.1.0"
+description = "Evidence-based rewards for community contributions - a standalone GenLayer Intelligent Contract"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests/direct"]
+addopts = "-p no:cacheprovider"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E9", "E7", "F"]
+# The contract imports the GenLayer SDK with a star import, as the SDK's own
+# examples do; lambdas bind small assertion helpers in tests.
+ignore = ["F403", "F405", "E731"]

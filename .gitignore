@@ -1,0 +1,24 @@
+# environment and keys - never commit secrets
+.env
+.env.*
+!.env.example
+*.env
+.data/
+*.key
+keystore*.json
+
+# python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# genlayer tooling
+.gltest_cache/
+artifacts/
+
+# scratch logs of long runs (the transcript JSON is the evidence of record)
+deploy/*.log
+deploy/*.err
