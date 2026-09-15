@@ -76,3 +76,18 @@ response, is in [`CONSENSUS.md`](CONSENSUS.md).
 | Ledger at the end | chain balance 530000000000000000 atto = accounted 530000000000000000 atto |
 
 Results and the plain statement of what did not hold: [`../README.md`](../README.md#verified).
+
+## Clean-clone check
+
+A fresh `git clone` of `720dccf` from GitHub, with nothing carried over from the
+working tree, on 2026-09-15:
+
+| Command | Result |
+|---|---|
+| `ruff check .` | clean |
+| `python scripts/generate_fixtures.py --check` | fixtures match (20 files) |
+| `python -m pytest tests/direct -q` | 194 passed |
+| `python scripts/preflight.py` | 7 checks, 0 failed |
+| `genvm-lint check contracts/contribution_court.py --json` | ok, 26 methods |
+
+CI (`.github/workflows/ci.yml`: ruff, fixtures, Direct Mode, genvm-lint) passed on `720dccf`.
