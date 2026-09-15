@@ -1,0 +1,1152 @@
+{
+ "campaigns": {
+  "docs": {
+   "accepted_content_types": [
+    "DOCUMENTATION"
+   ],
+   "allow_prior_work": false,
+   "appeal_window_seconds": 259200,
+   "approve_threshold": 60,
+   "cancellation_policy": "CLOSE_INTAKE_HONOUR_SUBMISSIONS",
+   "criteria": [
+    {
+     "id": "C1",
+     "question": "Does the page document every parameter in the specification, including whether it is required?",
+     "required": true,
+     "weight": 50
+    },
+    {
+     "id": "C2",
+     "question": "Does the page include a working example command?",
+     "required": false,
+     "weight": 30
+    },
+    {
+     "id": "C3",
+     "question": "Does the page explain the exit codes?",
+     "required": false,
+     "weight": 20
+    }
+   ],
+   "description": "Documentation bounty: a reference page for the ledger export command, with a working example backed by a run log.",
+   "min_supporting_sources": 1,
+   "opens_at": "2026-09-01T00:00:00Z",
+   "originality_policy": "ATTRIBUTED_DERIVATION_ALLOWED",
+   "per_wallet_limit": 2,
+   "reference_sources": [
+    {
+     "label": "ledger export feature specification",
+     "sha256": "2520a2262a51cf58e40c9795ac7d0008039187ea2fcfa2eb65cc50dc56367d99",
+     "url": "{BASE}sources/references/export-command-spec.md"
+    }
+   ],
+   "require_author_mark": true,
+   "required_task": "Document the ledger export command from its feature specification: every parameter, its exit codes, and a working example.",
+   "reward_bands": [
+    {
+     "label": "DOC",
+     "min_score": 60,
+     "reward_atto": "30000000000000000"
+    }
+   ],
+   "spec_version": 1,
+   "stall_window_seconds": 604800,
+   "submission_bond_atto": "5000000000000000",
+   "submission_deadline": "2026-10-15T23:59:59Z",
+   "supersedes": "",
+   "title": "Document the ledger export command",
+   "work_deadline": "2026-09-30T23:59:59Z"
+  },
+  "explainer": {
+   "accepted_content_types": [
+    "ARTICLE",
+    "TUTORIAL"
+   ],
+   "allow_prior_work": false,
+   "appeal_window_seconds": 259200,
+   "approve_threshold": 60,
+   "cancellation_policy": "CLOSE_INTAKE_HONOUR_SUBMISSIONS",
+   "criteria": [
+    {
+     "id": "C1",
+     "question": "Does the work correctly describe how a leader proposes a result and the other validators check it and vote?",
+     "required": true,
+     "weight": 50
+    },
+    {
+     "id": "C2",
+     "question": "Does the work explain appeals and when a result becomes final?",
+     "required": false,
+     "weight": 30
+    },
+    {
+     "id": "C3",
+     "question": "Is the work clear for a builder who has never used GenLayer?",
+     "required": false,
+     "weight": 20
+    }
+   ],
+   "description": "An educational article or tutorial for builders new to GenLayer, explaining how Optimistic Democracy reaches agreement.",
+   "min_supporting_sources": 0,
+   "opens_at": "2026-09-01T00:00:00Z",
+   "originality_policy": "ORIGINAL_REQUIRED",
+   "per_wallet_limit": 3,
+   "reference_sources": [
+    {
+     "label": "Optimistic Democracy in brief",
+     "sha256": "6ec95cc3dc65c38a9c2dbf78c0ed4555361cf3145f5b131b360fc83519ced879",
+     "url": "{BASE}sources/references/optimistic-democracy-in-brief.md"
+    }
+   ],
+   "require_author_mark": true,
+   "required_task": "Explain how GenLayer's Optimistic Democracy reaches agreement on transactions that need judgment: the leader and the other validators, the equivalence rule, and appeals.",
+   "reward_bands": [
+    {
+     "label": "GOLD",
+     "min_score": 85,
+     "reward_atto": "50000000000000000"
+    },
+    {
+     "label": "SILVER",
+     "min_score": 60,
+     "reward_atto": "20000000000000000"
+    }
+   ],
+   "spec_version": 1,
+   "stall_window_seconds": 604800,
+   "submission_bond_atto": "5000000000000000",
+   "submission_deadline": "2026-10-15T23:59:59Z",
+   "supersedes": "",
+   "title": "Explain Optimistic Democracy",
+   "work_deadline": "2026-09-30T23:59:59Z"
+  },
+  "translation": {
+   "accepted_content_types": [
+    "TRANSLATION"
+   ],
+   "allow_prior_work": false,
+   "appeal_window_seconds": 259200,
+   "approve_threshold": 60,
+   "cancellation_policy": "CLOSE_INTAKE_HONOUR_SUBMISSIONS",
+   "criteria": [
+    {
+     "id": "C1",
+     "question": "Does the translation preserve the meaning of every paragraph of the reference page?",
+     "required": true,
+     "weight": 60
+    },
+    {
+     "id": "C2",
+     "question": "Does the translation read as natural Spanish?",
+     "required": false,
+     "weight": 40
+    }
+   ],
+   "description": "A faithful Spanish translation of the campaign's reference page, for the Spanish-speaking community.",
+   "min_supporting_sources": 0,
+   "opens_at": "2026-09-01T00:00:00Z",
+   "originality_policy": "DERIVATION_OF_REFERENCE",
+   "per_wallet_limit": 2,
+   "reference_sources": [
+    {
+     "label": "Optimistic Democracy in brief",
+     "sha256": "6ec95cc3dc65c38a9c2dbf78c0ed4555361cf3145f5b131b360fc83519ced879",
+     "url": "{BASE}sources/references/optimistic-democracy-in-brief.md"
+    }
+   ],
+   "require_author_mark": true,
+   "required_task": "Translate the reference page Optimistic Democracy in brief into Spanish, preserving its meaning and crediting the original.",
+   "reward_bands": [
+    {
+     "label": "FULL",
+     "min_score": 60,
+     "reward_atto": "20000000000000000"
+    }
+   ],
+   "spec_version": 1,
+   "stall_window_seconds": 604800,
+   "submission_bond_atto": "5000000000000000",
+   "submission_deadline": "2026-10-15T23:59:59Z",
+   "supersedes": "",
+   "title": "Translate Optimistic Democracy in brief into Spanish",
+   "work_deadline": "2026-09-30T23:59:59Z"
+  }
+ },
+ "cases": [
+  {
+   "answer": {
+    "subjects": {
+     "C1": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "one validator acts as the leader and proposes a result"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "C2": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "anyone who thinks the accepted result is wrong can appeal before the appeal window closes"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "C3": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Think of it like a group project"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "LATE_DATING": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ABSENT"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ORIGINAL"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "explains how GenLayer's Optimistic Democracy reaches agreement"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "SUBSTANTIVE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "The other validators repeat the work on their own"
+       }
+      ],
+      "state": "SATISFIED"
+     }
+    }
+   },
+   "campaign": "explainer",
+   "case_id": "CC01",
+   "content_type": "ARTICLE",
+   "contributor": "alice",
+   "expected": [
+    "APPROVED",
+    "MEETS_CRITERIA",
+    "GOLD"
+   ],
+   "notes": "the honest baseline, and the negative control for every flag: original, on topic, substantive, dated in time, and it quotes an injection phrase as text without addressing the evaluator",
+   "publication_at": "2026-09-14T10:00:00Z",
+   "summary": "An original explainer of Optimistic Democracy for new builders.",
+   "supporting": [],
+   "work": "work/alice/optimistic-democracy-explained.md"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "C1": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "A leader validator proposes a result for the transaction"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "C2": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "It becomes final once an appeal window passes"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "C3": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "GenLayer settles transactions that need judgment"
+       }
+      ],
+      "state": "PARTIALLY_SATISFIED"
+     },
+     "LATE_DATING": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ABSENT"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "A set of other validators then repeat the same work independently"
+       },
+       {
+        "evidence_id": "E2",
+        "text": "A set of other validators then repeat the same work independently"
+       }
+      ],
+      "state": "COPIED"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "A leader validator proposes a result for the transaction"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "SUBSTANTIVE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "vote on whether the leader's result is acceptable"
+       }
+      ],
+      "state": "SATISFIED"
+     }
+    }
+   },
+   "campaign": "explainer",
+   "case_id": "CC02",
+   "content_type": "ARTICLE",
+   "contributor": "bob",
+   "expected": [
+    "DUPLICATE_OR_DERIVATIVE",
+    "COPIED",
+    "NONE"
+   ],
+   "notes": "paragraphs of the campaign's reference page copied word for word, uncredited",
+   "publication_at": "2026-09-12T10:00:00Z",
+   "summary": "My own guide to Optimistic Democracy.",
+   "supporting": [],
+   "work": "work/bob/optimistic-democracy-guide.md"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "C1": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "NOT_SATISFIED"
+     },
+     "C2": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "NOT_SATISFIED"
+     },
+     "C3": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "NOT_SATISFIED"
+     },
+     "LATE_DATING": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ABSENT"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ORIGINAL"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Optimistic Democracy is amazing and you need to know about it"
+       }
+      ],
+      "state": "PARTIALLY_SATISFIED"
+     },
+     "SUBSTANTIVE": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "NOT_SATISFIED"
+     }
+    }
+   },
+   "campaign": "explainer",
+   "case_id": "CC03",
+   "content_type": "ARTICLE",
+   "contributor": "carol",
+   "expected": [
+    "REJECTED",
+    "LOW_EFFORT",
+    "NONE"
+   ],
+   "notes": "promotion with no explanation in it",
+   "publication_at": "2026-09-13T10:00:00Z",
+   "summary": "Why Optimistic Democracy matters.",
+   "supporting": [],
+   "work": "work/carol/join-the-future.md"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "C1": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "NOT_SATISFIED"
+     },
+     "C2": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "NOT_SATISFIED"
+     },
+     "C3": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "NOT_SATISFIED"
+     },
+     "LATE_DATING": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ABSENT"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ORIGINAL"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "NOT_SATISFIED"
+     },
+     "SUBSTANTIVE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Batch several transfers into one transaction"
+       }
+      ],
+      "state": "SATISFIED"
+     }
+    }
+   },
+   "campaign": "explainer",
+   "case_id": "CC04",
+   "content_type": "ARTICLE",
+   "contributor": "dave",
+   "expected": [
+    "OUT_OF_SCOPE",
+    "OFF_TOPIC",
+    "NONE"
+   ],
+   "notes": "a useful article about something else",
+   "publication_at": "2026-09-13T10:00:00Z",
+   "summary": "Practical advice on gas fees.",
+   "supporting": [],
+   "work": "work/dave/cutting-gas-fees.md"
+  },
+  {
+   "answer": null,
+   "campaign": "explainer",
+   "case_id": "CC05",
+   "content_type": "ARTICLE",
+   "contributor": "bob",
+   "expected": [
+    "REJECTED",
+    "MANIPULATION",
+    "NONE"
+   ],
+   "notes": "addresses the evaluator and asks for approval; code decides, no model is asked",
+   "publication_at": "2026-09-11T10:00:00Z",
+   "summary": "A review of Optimistic Democracy.",
+   "supporting": [],
+   "work": "work/bob/optimistic-democracy-review.md"
+  },
+  {
+   "answer": null,
+   "campaign": "explainer",
+   "case_id": "CC06",
+   "content_type": "ARTICLE",
+   "contributor": "carol",
+   "expected": [
+    "INSUFFICIENT_EVIDENCE",
+    "HIDDEN_TEXT",
+    "NONE"
+   ],
+   "notes": "zero-width characters inside the text; code decides",
+   "publication_at": "2026-09-12T10:00:00Z",
+   "summary": "Validators explained.",
+   "supporting": [],
+   "work": "work/carol/validators-explained.md"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "C1": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "the other validators run the same work themselves"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "C2": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "After the window closes with no successful appeal"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "C3": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "This walkthrough follows one transaction"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "LATE_DATING": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Published: 2026-10-05"
+       }
+      ],
+      "state": "PRESENT"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ORIGINAL"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "follows one transaction through GenLayer's Optimistic Democracy"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "SUBSTANTIVE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "the leader validator runs the contract and proposes a result"
+       }
+      ],
+      "state": "SATISFIED"
+     }
+    }
+   },
+   "campaign": "explainer",
+   "case_id": "CC07",
+   "content_type": "TUTORIAL",
+   "contributor": "dave",
+   "expected": [
+    "LATE_SUBMISSION",
+    "DATED_AFTER_DEADLINE",
+    "NONE"
+   ],
+   "notes": "declares an in-time publication, but the work dates itself after the deadline",
+   "publication_at": "2026-09-14T09:00:00Z",
+   "summary": "A walkthrough following one transaction.",
+   "supporting": [],
+   "work": "work/dave/optimistic-democracy-walkthrough.md"
+  },
+  {
+   "answer": null,
+   "campaign": "explainer",
+   "case_id": "CC08",
+   "content_type": "ARTICLE",
+   "contributor": "dave",
+   "expected": [
+    "INSUFFICIENT_EVIDENCE",
+    "AUTHOR_MARK_MISSING",
+    "NONE"
+   ],
+   "notes": "the work does not carry its contributor's wallet address; code decides",
+   "publication_at": "2026-09-12T10:00:00Z",
+   "summary": "Short notes.",
+   "supporting": [],
+   "work": "work/dave/optimistic-democracy-notes.md"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "C1": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "A leader validator proposes the result"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "C2": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "It becomes final after the appeal window passes"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "C3": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "rewritten in shorter sentences"
+       }
+      ],
+      "state": "PARTIALLY_SATISFIED"
+     },
+     "LATE_DATING": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ABSENT"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "the structure and the facts all come from that reference page"
+       }
+      ],
+      "state": "ATTRIBUTED_DERIVATIVE"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "A leader validator proposes the result"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "SUBSTANTIVE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Other validators repeat the work and vote"
+       }
+      ],
+      "state": "PARTIALLY_SATISFIED"
+     }
+    }
+   },
+   "campaign": "explainer",
+   "case_id": "CC09",
+   "content_type": "ARTICLE",
+   "contributor": "alice",
+   "expected": [
+    "DUPLICATE_OR_DERIVATIVE",
+    "DERIVATIVE_NOT_ALLOWED",
+    "NONE"
+   ],
+   "notes": "an honest, credited summary of the reference - which this campaign's ORIGINAL_REQUIRED policy does not reward; the bond is returned",
+   "publication_at": "2026-09-10T10:00:00Z",
+   "summary": "A credited short summary.",
+   "supporting": [],
+   "work": "work/alice/optimistic-democracy-summary.md"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "C1": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Una apelacion incorpora a un grupo mayor de validadores"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "C2": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "de modo que los nodos honestos cuyas respuestas solo difieren en la redaccion pueden coincidir"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "LATE_DATING": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ABSENT"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Todo el contenido procede de esa pagina"
+       }
+      ],
+      "state": "ATTRIBUTED_DERIVATIVE"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Traduccion al espanol de la pagina de referencia"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "SUBSTANTIVE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Un validador lider propone un resultado para la transaccion"
+       }
+      ],
+      "state": "SATISFIED"
+     }
+    }
+   },
+   "campaign": "translation",
+   "case_id": "CC10",
+   "content_type": "TRANSLATION",
+   "contributor": "carol",
+   "expected": [
+    "APPROVED",
+    "MEETS_CRITERIA",
+    "FULL"
+   ],
+   "notes": "a credited translation of the reference: the derivation this campaign asks for",
+   "publication_at": "2026-09-14T10:00:00Z",
+   "summary": "Spanish translation of the reference page.",
+   "supporting": [],
+   "work": "work/carol/democracia-optimista-en-breve.md"
+  },
+  {
+   "answer": null,
+   "campaign": "translation",
+   "case_id": "CC11",
+   "content_type": "TRANSLATION",
+   "contributor": "bob",
+   "expected": [
+    "DUPLICATE_OR_DERIVATIVE",
+    "REFERENCE_COPY",
+    "NONE"
+   ],
+   "notes": "the reference page itself, rehosted byte for byte; code decides and the bond is forfeited",
+   "publication_at": "2026-09-12T10:00:00Z",
+   "summary": "Translation.",
+   "supporting": [],
+   "work": "work/bob/optimistic-democracy-in-brief.md"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "C1": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "the file to write; an existing file is replaced"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "C2": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "ledger export --format csv --since 2026-09-01 --out september.csv"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "C3": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Exit code 2 means a required flag is missing"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "LATE_DATING": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ABSENT"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Based on the ledger export feature specification"
+       }
+      ],
+      "state": "ATTRIBUTED_DERIVATIVE"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "writes the ledger's entries to a file"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "SUBSTANTIVE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "exports only entries on or after that date"
+       }
+      ],
+      "state": "SATISFIED"
+     }
+    }
+   },
+   "campaign": "docs",
+   "case_id": "CC12",
+   "content_type": "DOCUMENTATION",
+   "contributor": "alice",
+   "expected": [
+    "APPROVED",
+    "MEETS_CRITERIA",
+    "DOC"
+   ],
+   "notes": "documentation credited to the specification, with its run log cited",
+   "publication_at": "2026-09-14T10:00:00Z",
+   "summary": "Reference page for ledger export with a run log.",
+   "supporting": [
+    [
+     "work/alice/ledger-export-example-output.txt",
+     "example run output"
+    ]
+   ],
+   "work": "work/alice/ledger-export-guide.md"
+  },
+  {
+   "answer": null,
+   "appeal_answer": {
+    "subjects": {
+     "C1": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "the file to write; an existing file is replaced"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "C2": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "ledger export --format json --out all-entries.json"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "C3": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "0 success, 2 missing required flag"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "LATE_DATING": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ABSENT"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Based on the ledger export feature specification"
+       }
+      ],
+      "state": "ATTRIBUTED_DERIVATIVE"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "writes the ledger's entries to a file"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "SUBSTANTIVE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "json gives one object per entry"
+       }
+      ],
+      "state": "SATISFIED"
+     }
+    }
+   },
+   "appeal_expected": [
+    "APPROVED",
+    "MEETS_CRITERIA",
+    "DOC"
+   ],
+   "appeal_items": [
+    [
+     "work/dave/ledger-export-run.txt",
+     "run log"
+    ]
+   ],
+   "campaign": "docs",
+   "case_id": "CC13",
+   "content_type": "DOCUMENTATION",
+   "contributor": "dave",
+   "expected": [
+    "INSUFFICIENT_EVIDENCE",
+    "SUPPORTING_SOURCES_SHORT",
+    "NONE"
+   ],
+   "notes": "the campaign requires one cited source and none was given; the contributor appeals with the run log (CC13 appeal answer)",
+   "publication_at": "2026-09-14T10:00:00Z",
+   "summary": "ledger export reference.",
+   "supporting": [],
+   "work": "work/dave/ledger-export-reference.md"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "C1": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "the rest of the validators check that answer by doing the same job themselves"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "C2": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "during the appeal window you can ask a bigger group of validators"
+       }
+      ],
+      "state": "PARTIALLY_SATISFIED"
+     },
+     "C3": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "I wrote this for people shipping their first Intelligent Contract"
+       }
+      ],
+      "state": "PARTIALLY_SATISFIED"
+     },
+     "LATE_DATING": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ABSENT"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ORIGINAL"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "one validator goes first and proposes an answer"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "SUBSTANTIVE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "They compare whether two answers mean the same thing"
+       }
+      ],
+      "state": "SATISFIED"
+     }
+    }
+   },
+   "appeal_answer": {
+    "subjects": {
+     "C1": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "the rest of the validators check that answer by doing the same job themselves"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "C2": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "during the appeal window you can ask a bigger group of validators"
+       }
+      ],
+      "state": "PARTIALLY_SATISFIED"
+     },
+     "C3": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "I wrote this for people shipping their first Intelligent Contract"
+       }
+      ],
+      "state": "PARTIALLY_SATISFIED"
+     },
+     "LATE_DATING": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ABSENT"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "one validator goes first and proposes an answer"
+       },
+       {
+        "evidence_id": "E3",
+        "text": "one validator goes first and proposes an answer"
+       }
+      ],
+      "state": "COPIED"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "one validator goes first and proposes an answer"
+       }
+      ],
+      "state": "SATISFIED"
+     },
+     "SUBSTANTIVE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "They compare whether two answers mean the same thing"
+       }
+      ],
+      "state": "SATISFIED"
+     }
+    }
+   },
+   "appeal_expected": [
+    "DUPLICATE_OR_DERIVATIVE",
+    "COPIED",
+    "NONE"
+   ],
+   "appeal_items": [
+    [
+     "external/rosa-consensus-notes.md",
+     "Rosa Quintero, Consensus notes"
+    ]
+   ],
+   "appeal_party": "owner",
+   "campaign": "explainer",
+   "case_id": "CC14",
+   "content_type": "ARTICLE",
+   "contributor": "bob",
+   "expected": [
+    "APPROVED",
+    "MEETS_CRITERIA",
+    "SILVER"
+   ],
+   "notes": "copied from a blog the campaign never listed, so the first panel cannot see the copy; the owner appeals with the blog as a reference source (CC14 appeal)",
+   "publication_at": "2026-09-13T10:00:00Z",
+   "summary": "Consensus explained for first-time builders.",
+   "supporting": [],
+   "work": "work/bob/consensus-for-builders.md"
+  }
+ ],
+ "hashes": {
+  "sources/external/rosa-consensus-notes.md": "3d644a985f8e3f144d4ebf742d09bda5af56dc57a3d9b59531efc02e7c92e551",
+  "sources/references/export-command-spec.md": "2520a2262a51cf58e40c9795ac7d0008039187ea2fcfa2eb65cc50dc56367d99",
+  "sources/references/optimistic-democracy-in-brief.md": "6ec95cc3dc65c38a9c2dbf78c0ed4555361cf3145f5b131b360fc83519ced879",
+  "sources/work/alice/ledger-export-example-output.txt": "21ca16cd2ae679513b08b42fbd4bcd72a8c38c8068edf0bbce1ac7f40dd0cedf",
+  "sources/work/alice/ledger-export-guide.md": "70afe468df444e95366d10ee49dfb697b96d848d56ebf99ae46837cc5cb61316",
+  "sources/work/alice/optimistic-democracy-explained.md": "12205997d1a3bba76ff236884161283576bb485013d83240123f8ef6a0f26cf7",
+  "sources/work/alice/optimistic-democracy-summary.md": "cc4e927629ced74253b621e69f5dbb30d5702037ae36754f7eaadc1f7b7820a8",
+  "sources/work/bob/consensus-for-builders.md": "e3e3598ad8d16239c89d7123d00d4990474196e06e9420bf7330955c900c028e",
+  "sources/work/bob/optimistic-democracy-guide.md": "1470adb9061f5a0025f5d180f6be19ee5296498ddd4002c1bda24051e7ced4ec",
+  "sources/work/bob/optimistic-democracy-in-brief.md": "6ec95cc3dc65c38a9c2dbf78c0ed4555361cf3145f5b131b360fc83519ced879",
+  "sources/work/bob/optimistic-democracy-review.md": "0ba4b86d6e987ce27f223dd7cc7af742834eee19877c613fc7280cad9619a929",
+  "sources/work/carol/democracia-optimista-en-breve.md": "6c375eccccf477251b72cd5ead9989639a299aea25f8ade97fd5d084310bd4ee",
+  "sources/work/carol/join-the-future.md": "4c1cff027604e3ea5025943d47a4263c7e6a41bcce21c8a587b38f45854e6f4d",
+  "sources/work/carol/validators-explained.md": "ee77ae6d7a5b78a5f12cd2947e9e2bffa4f243d726eb820270b281c85379ad28",
+  "sources/work/dave/cutting-gas-fees.md": "6d252b03bac2bc326f317863081a108c277f199d25832c248b99a89df7030530",
+  "sources/work/dave/ledger-export-reference.md": "8e39bada5752498ee09f8e18e1b01685c6e38107f792272c06854f66c1e13373",
+  "sources/work/dave/ledger-export-run.txt": "8fcc27bd108211af64fd7c101df3a65afe99b2ab27067a6a13cf0e4bde6852a0",
+  "sources/work/dave/optimistic-democracy-notes.md": "cf590b247eb7390d8be06adeeb62fe2b344d5ecf365cf43813eaf47a745e9f85",
+  "sources/work/dave/optimistic-democracy-walkthrough.md": "793f8d4b3876dca601989a739c875d5589d4a0081623dca6d84175e00a1a40c0"
+ }
+}

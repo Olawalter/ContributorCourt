@@ -1,0 +1,9 @@
+$ ledger export --format csv --since 2026-09-01 --out september.csv
+wrote 3 entries to september.csv
+exit code 0
+
+$ cat september.csv
+date,account,amount
+2026-09-02,ops,120
+2026-09-05,grants,450
+2026-09-09,ops,75

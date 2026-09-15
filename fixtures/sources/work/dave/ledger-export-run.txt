@@ -1,0 +1,3 @@
+$ ledger export --format json --out all-entries.json
+wrote 3 entries to all-entries.json
+exit code 0
