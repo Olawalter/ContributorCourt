@@ -109,3 +109,19 @@ sufficiency, reachability and bond.
 - Every refusal a validator makes prints a line to its stdout: `[DISAGREE]` with
   the difference, `[MINE]` with its own status and findings, `[DOWNGRADE]` when a
   finding lost its support. The live run records these per node.
+
+## What the diagnostic pass showed
+
+Every catalogue case was evaluated once on a disposable deployment
+(`0xB1fAa2bf3e1807fE1AB86fbe186452033c5a6566`, commit `4a88111`), with each node's
+stdout recorded (`deploy/diagnostics/cases_0xb1faa2bf.json`). 11 of 14 held.
+
+| Case | Expected | Observed | What the nodes showed | Change |
+|---|---|---|---|---|
+| CC01, the honest explainer | `APPROVED` | `DUPLICATE_OR_DERIVATIVE` / `COPIED`, ratified 3-2 | three models called it a copy, quoting passages of the work and the reference that share a subject and short phrases; one validator's copy quote did not ground and was downgraded, another read `ORIGINAL` | a copy now needs a run of at least 12 consecutive words quoted from both sides (`COPY_RUN_WORDS`); the prompt says shared subject matter, terms and paraphrase are not copying |
+| CC03, promotion | `REJECTED` / `LOW_EFFORT` | `OUT_OF_SCOPE` / `OFF_TOPIC` | relevance was read as whether the work does the task | relevance now asks only what the work is about |
+| CC14, the copied blog | `APPROVED` (first round) | `REJECTED` / `REQUIRED_CRITERION_FAILED` | C1 asks about validators voting; the text never mentioned a vote, so it read as partly met - a fair reading | the fixture blog and its copy now name the vote |
+
+The same pass also showed the reservation rule working on chain: the explainer
+pool funded for eight reservations refused the ninth filing and returned its bond.
+The live run of record ran on the corrected contract.

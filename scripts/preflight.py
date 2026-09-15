@@ -69,7 +69,7 @@ def main():
           ", ".join(sorted(set(stray))))
 
     pending = [p.name for p in DOCS if p.exists()
-               and re.search(r"\b[A-Z0-9]+_PENDING\b", p.read_text(encoding="utf-8"))]
+               and re.search(r"(?<![A-Za-z0-9])[A-Z0-9_]+_PENDING(?![A-Za-z0-9_])", p.read_text(encoding="utf-8"))]
     check("no document carries an unfilled placeholder", not pending, ", ".join(pending))
 
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
