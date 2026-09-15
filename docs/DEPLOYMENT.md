@@ -14,7 +14,7 @@ Only facts a receipt, a read or a command output shows. Every value below is in
 | Deployment transaction | `0x43bb908c8d56e1a52561cb6191757dfb74a57511a7398109a930431356be2d89` |
 | Deployed at | 2026-09-15T18:15:36Z |
 | Receipt | status FINALIZED, leader execution SUCCESS, votes AGREE, IDLE, AGREE, AGREE, IDLE |
-| Source commit | `b76700cdaea19f71cdd44f1bacace0dd20bcc77f` |
+| Source commit | `6f190691a5fae96bf065c7ec3109705a11c6fa42` |
 | Source blob | `689b45cbd08cf27c9a4a1b4f418275c9c6a407ca` |
 | Source sha256 | `0a5d1018196ab943a135f2b49b8844a09a2f859af3a3480d84a31d16e310ac16` |
 | Deployed source sha256 (`gen_getContractCode`) | `0a5d1018196ab943a135f2b49b8844a09a2f859af3a3480d84a31d16e310ac16` - byte-identical |
@@ -59,7 +59,7 @@ installed SDK, the linter's validation and live StudioNet behaviour.
 
 | Address | Source commit | Purpose | Record |
 |---|---|---|---|
-| `0xB1fAa2bf3e1807fE1AB86fbe186452033c5a6566` | `4a88111` | the diagnostic pass: every catalogue case evaluated once, per-node readings recorded | `deploy/diagnostics/deployment_0xb1faa2bf.json`, `deploy/diagnostics/cases_0xb1faa2bf.json` |
+| `0xB1fAa2bf3e1807fE1AB86fbe186452033c5a6566` | `6637c52` | the diagnostic pass: every catalogue case evaluated once, per-node readings recorded | `deploy/diagnostics/deployment_0xb1faa2bf.json`, `deploy/diagnostics/cases_0xb1faa2bf.json` |
 
 It is never the deployment of record. What it showed, and what changed in
 response, is in [`CONSENSUS.md`](CONSENSUS.md).
@@ -71,7 +71,7 @@ response, is in [`CONSENSUS.md`](CONSENSUS.md).
 | Transcript | `deploy/live_run_transcript.json` |
 | Transactions | 71 |
 | Window | 2026-09-15T18:15:57Z to 2026-09-15T20:00:18Z |
-| Fixtures served from | `https://raw.githubusercontent.com/Olawalter/ContributorCourt/b76700cdaea19f71cdd44f1bacace0dd20bcc77f/fixtures/` |
+| Fixtures served from | `https://raw.githubusercontent.com/Olawalter/ContributorCourt/b76700cdaea19f71cdd44f1bacace0dd20bcc77f/fixtures/` at run time (that commit is `6f19069` after re-authoring; same files) |
 | Outcomes held | 15 of 16 |
 | Ledger at the end | chain balance 530000000000000000 atto = accounted 530000000000000000 atto |
 
@@ -79,7 +79,7 @@ Results and the plain statement of what did not hold: [`../README.md`](../README
 
 ## Clean-clone check
 
-A fresh `git clone` of `720dccf` from GitHub, with nothing carried over from the
+A fresh `git clone` of `b5194cf` from GitHub, with nothing carried over from the
 working tree, on 2026-09-15:
 
 | Command | Result |
@@ -90,4 +90,23 @@ working tree, on 2026-09-15:
 | `python scripts/preflight.py` | 7 checks, 0 failed |
 | `genvm-lint check contracts/contribution_court.py --json` | ok, 26 methods |
 
-CI (`.github/workflows/ci.yml`: ruff, fixtures, Direct Mode, genvm-lint) passed on `720dccf`.
+CI (`.github/workflows/ci.yml`: ruff, fixtures, Direct Mode, genvm-lint) passed on `b5194cf`.
+
+## Re-authored history
+
+On 2026-09-15, after the live run, every commit in this repository was re-authored
+to Olawalter and `main` was force-pushed once. File contents did not change; commit
+hashes did. The documents cite the new hashes. The JSON records under `deploy/` keep
+the hashes that existed when they were written, which is also what the commit-pinned
+fixture URLs in the transcripts name; each deployment record now also carries
+`source_commit_after_reauthoring`.
+
+| Recorded as | Same tree today |
+|---|---|
+| `720dccfe936484b844e32a2fd76e4ae6b92ce015` | `b5194cfc89d48d451ce8441c1973207dc4630de6` |
+| `b76700cdaea19f71cdd44f1bacace0dd20bcc77f` | `6f190691a5fae96bf065c7ec3109705a11c6fa42` |
+| `4a88111a9e09fae8bb9c5f9bef8667d65dbf0f7b` | `6637c5263f3de932f919aa55ff6c5ca524bf4e3c` |
+
+The contract file's git blob (`689b45cbd08cf27c9a4a1b4f418275c9c6a407ca`) and its sha256
+are unchanged, so the deployment is still byte-identical to the committed file
+(`python scripts/deploy_studionet.py --verify`).

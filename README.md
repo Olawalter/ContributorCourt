@@ -8,7 +8,7 @@ A campaign owner fixes a specification - the task, the criteria and their weight
 
 No model output ever reaches a status, a score or an amount.
 
-Deployment of record: [`0x0f47E6A49845c983fa9B61E441928F3435E9Adde`](https://explorer-studio.genlayer.com/address/0x0f47E6A49845c983fa9B61E441928F3435E9Adde) on GenLayer StudioNet, from commit `b76700c`, byte-identical.
+Deployment of record: [`0x0f47E6A49845c983fa9B61E441928F3435E9Adde`](https://explorer-studio.genlayer.com/address/0x0f47E6A49845c983fa9B61E441928F3435E9Adde) on GenLayer StudioNet, from commit `6f19069`, byte-identical.
 
 ## At a glance
 

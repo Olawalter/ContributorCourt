@@ -31,7 +31,7 @@ RESULTS = []
 # names documents use that belong to the toolchain, the repository or JSON, not the contract
 EXTERNAL = {"gen_getContractCode", "gen_getContractSchema", "run_nondet_unsafe",
             "response_format", "consensus_max_rotations", "read_contract", "create_client",
-            "CONTRIBUTION_LIVE_WRITES", "raw_base"}
+            "CONTRIBUTION_LIVE_WRITES", "raw_base", "source_commit_after_reauthoring"}
 ADDRESS = re.compile(r"0x[0-9a-fA-F]{40}(?![0-9a-fA-F])")
 
 

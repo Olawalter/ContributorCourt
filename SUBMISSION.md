@@ -15,7 +15,7 @@ on what the work is; code decides what it earns.
 
 **Deployment transaction** - `0x43bb908c8d56e1a52561cb6191757dfb74a57511a7398109a930431356be2d89`
 
-**Deployed source** - commit `b76700c`, https://github.com/Olawalter/ContributorCourt/blob/b76700cdaea19f71cdd44f1bacace0dd20bcc77f/contracts/contribution_court.py (byte-identical on chain)
+**Deployed source** - commit `6f19069`, https://github.com/Olawalter/ContributorCourt/blob/6f190691a5fae96bf065c7ec3109705a11c6fa42/contracts/contribution_court.py (byte-identical on chain)
 
 ## Why GenLayer is required
 

@@ -16,6 +16,7 @@
   "signer": "0x68656Dc05F266c8cE2AE6f1F8715c24732b2596b",
   "source_blob": "b0a9ff5660bbb99292022fd0494d646f0455157e",
   "source_commit": "4a88111a9e09fae8bb9c5f9bef8667d65dbf0f7b",
+  "source_commit_after_reauthoring": "6637c5263f3de932f919aa55ff6c5ca524bf4e3c",
   "source_sha256": "cab60c2639eaabca2d820ca347739a4b7974c09ebe4257a8746c773db15c4ac6",
   "status": "FINALIZED",
   "votes": [

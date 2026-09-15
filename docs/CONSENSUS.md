@@ -113,7 +113,7 @@ sufficiency, reachability and bond.
 ## What the diagnostic pass showed
 
 Every catalogue case was evaluated once on a disposable deployment
-(`0xB1fAa2bf3e1807fE1AB86fbe186452033c5a6566`, commit `4a88111`), with each node's
+(`0xB1fAa2bf3e1807fE1AB86fbe186452033c5a6566`, commit `6637c52`), with each node's
 stdout recorded (`deploy/diagnostics/cases_0xb1faa2bf.json`). 11 of 14 held.
 
 | Case | Expected | Observed | What the nodes showed | Change |
