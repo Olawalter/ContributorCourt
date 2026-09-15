@@ -1,0 +1,106 @@
+wallets: owner 0x880100f0a9f5ec5c88701049e058f49402995ab0, alice 0xef6e006cd8a68c9cfe88a3640415ab0c79c71921, bob 0x41c1be19a7726e593e09f2e8748369afbeba2580, carol 0xcc7edd6b8bcb5febcc62cf47b4923a8267831e56, dave 0x6c9de015919764af69580cbc7382a93cb788e36a, stranger 0xa141a003dc7e801517a838f88193229078a4d614
+  verified 19 source locations against local bytes
+  owner.create_campaign tx 0x3441be47f2879924c07ff59446406102f6ee46f305442e247238a649add05b7e
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+  owner.fund_campaign tx 0xaf4fda6b2c8f46a5d66bf8db18f50105d385c3e49ac75cb359ce33816cf30ea9
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'AGREE', 'IDLE']
+  owner.activate_campaign tx 0xa11615ff6d553880497bb5864e02bc094f379823f11ccdec1372126758db8441
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'IDLE', 'AGREE', 'AGREE']
+  owner.create_campaign tx 0x668045631adf4b57a9c817dcbfe38d8a98aa04088b2d64aa86474319763f0169
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  owner.fund_campaign tx 0x2176e9f3d655cad11bc1392edb3987bc44c068e1787ca3c451bf14301c565634
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+  owner.activate_campaign tx 0x697fa0b753e33eca802faed90e2b4cb8aac73ef22bd492b624b35dcf52d250d5
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'IDLE', 'AGREE']
+  owner.create_campaign tx 0x6afcb3ff6603ec33c80973740e4fe1a77778b8874f5281c29df11b7bb6e6e7c9
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'AGREE', 'IDLE']
+  owner.fund_campaign tx 0xe1e6e3859d47eb0e6a1ac9af78fc91ec17287c54b2da7eb0bdffd684350dc203
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+  owner.activate_campaign tx 0xb9198ce682584c16d129c2312cf084ffa3e7040f3f0765786ceea3c9f03be673
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'AGREE', 'IDLE']
+  alice.submit_contribution tx 0x6134499efeb67d7c139525ed7933a70d05646f8470bf1392222c699bf69ebb70
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'IDLE']
+  stranger.request_evaluation tx 0x4127c03e2cd229306941c264ee166c45dbd842003f88795d74fa404ad62cd351
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  CC01: APPROVED / MEETS_CRITERIA / GOLD (PANEL) held=True
+  bob.submit_contribution tx 0x82bb865534f443d899fe2efff1b9f7c8e906422f53be6f43159eb49707457a84
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'IDLE', 'AGREE', 'AGREE']
+  stranger.request_evaluation tx 0x7d02236cb7d48f58e4137e5d5e989f5babe887fb06b848abffc19111444fe50d
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+  CC02: DUPLICATE_OR_DERIVATIVE / COPIED / NONE (PANEL) held=True
+  carol.submit_contribution tx 0x84cd5877dd9151766be2f7fa91eec021417b0282cab3573735e7b700294afa4f
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'IDLE', 'AGREE', 'AGREE']
+  stranger.request_evaluation tx 0x9e067d1467627dfc9bd34dad911707e78a230b89edd5ee131abddfc64e21f71c
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'IDLE', 'AGREE', 'AGREE']
+  CC03: REJECTED / LOW_EFFORT / NONE (PANEL) held=True
+  dave.submit_contribution tx 0x2e26abfda4d3a30732a95d93365b307a3eba88758e3ba679dad7cc8b2588d838
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'IDLE', 'AGREE', 'AGREE']
+  stranger.request_evaluation tx 0x8849b80c734175ea1aa290a392597c9335f561255a8d3ec376d323a9d4bd3478
+    FINALIZED leader SUCCESS votes ['IDLE', 'IDLE', 'AGREE', 'AGREE', 'AGREE']
+  CC04: OUT_OF_SCOPE / OFF_TOPIC / NONE (PANEL) held=True
+  bob.submit_contribution tx 0xe3ec07c7bd48c8ae09d72c1e97ecc4cf5f10f2362ff0c1146322697639c5ddec
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'IDLE', 'AGREE', 'AGREE']
+  stranger.request_evaluation tx 0x90cabc96fd1f869ea5e3475b5b6cee7bd36b38ab5b9b10d2b03ab32dba26757b
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  CC05: REJECTED / MANIPULATION / NONE (CODE) held=True
+  carol.submit_contribution tx 0x1da2eafec02bdf7c0d1a3da01a5e5a391180af67f8f976c9e214656ef18159da
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'AGREE', 'AGREE']
+  stranger.request_evaluation tx 0x8fafd5ad4f5b0569788e9668a73429b26fe0ee07ac260568d5f940283cc07f5b
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'AGREE', 'IDLE']
+  CC06: INSUFFICIENT_EVIDENCE / HIDDEN_TEXT / NONE (CODE) held=True
+  dave.submit_contribution tx 0xb593b60285d03d3f8d6256370c903aff1ce2660ca750f1b2dbff22d26686b21a
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'IDLE', 'AGREE', 'AGREE']
+  stranger.request_evaluation tx 0x9874704ac29cc4d19c416cd4a5a47ad37f06298e74bbe9e6a87d8d4a8bca2575
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'IDLE', 'AGREE', 'AGREE']
+  CC07: LATE_SUBMISSION / DATED_AFTER_DEADLINE / NONE (PANEL) held=True
+  dave.submit_contribution tx 0x9abe66143ec7335c41d561bcf64948ca5e10ce82e99138284be172701341ae20
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'AGREE', 'IDLE']
+  stranger.request_evaluation tx 0xb5c802149cff0022b1af7d187296493978c22a93aae9340dcc51a51e529f67a8
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'IDLE', 'AGREE', 'AGREE']
+  CC08: INSUFFICIENT_EVIDENCE / AUTHOR_MARK_MISSING / NONE (CODE) held=True
+  alice.submit_contribution tx 0x91a2d855325adc972df5826edce3cd31abcbb5afa0cc29d120e944a34b745ff0
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'IDLE', 'AGREE']
+  stranger.request_evaluation tx 0xc6ff67f315ecc54914517b77dcb55842b4c54a2c6effa2da05a6414d53a68358
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'AGREE', 'IDLE']
+  CC09: DUPLICATE_OR_DERIVATIVE / DERIVATIVE_NOT_ALLOWED / NONE (PANEL) held=True
+  carol.submit_contribution tx 0xe2bec0acc18b5ff352c656a081e504c2a98eb70419a7c1266294fa2b833b5c53
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  stranger.request_evaluation tx 0x896b80f99032bb76ba61387e28daa3c53992a0270819f75873b260b1f60a14b2
+    FINALIZED leader SUCCESS votes ['IDLE', 'IDLE', 'AGREE', 'AGREE', 'AGREE']
+  CC10: APPROVED / MEETS_CRITERIA / FULL (PANEL) held=True
+  bob.submit_contribution tx 0x24e6c155552ab3f20cd9cb5360d88adb50b6ea43ff166ee8edf236d0d2d2500d
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+  stranger.request_evaluation tx 0x3117bab1f16315bac40a655fc38cf8565f06a3871f9dda8a3a5a8ee0e42b34c1
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'AGREE', 'IDLE']
+  CC11: DUPLICATE_OR_DERIVATIVE / REFERENCE_COPY / NONE (CODE) held=True
+  alice.submit_contribution tx 0xb4c29ee4cf5b5b1b9544a6fb38056616475635cc2c0613c63904b02320630f89
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'AGREE', 'IDLE']
+  stranger.request_evaluation tx 0xf01a5a352783336ecd91668400746e3a4b22e139cd533ce3284d5819de1076ba
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'DISAGREE', 'IDLE', 'AGREE']
+  CC12: APPROVED / MEETS_CRITERIA / DOC (PANEL) held=True
+  dave.submit_contribution tx 0x89bf0c9ac3d9ab8e5c1ecaebb9eb56e24e941cf2361061e0c3d2f4ae057567ac
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'IDLE', 'AGREE', 'AGREE']
+  stranger.request_evaluation tx 0x44e8ee87b4bee6a70111ec19fd836ea6d3ad69b62ab52284f43b7644c48cd71f
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'IDLE', 'AGREE', 'AGREE']
+  CC13: INSUFFICIENT_EVIDENCE / SUPPORTING_SOURCES_SHORT / NONE (CODE) held=True
+  dave.appeal tx 0x90157a3737265635b047bd656761ce36524b778f250a82762742ef16c29c06bd
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'AGREE', 'IDLE']
+  CC13:appeal: APPROVED / MEETS_CRITERIA / DOC (PANEL) held=True
+  bob.submit_contribution tx 0x85c8d6bfd72a010e7c2ad49f50a79088b47c8f7fa87340b0c37380072334fab6
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'AGREE', 'IDLE']
+    rpc transient on gen_call (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+    rpc transient on gen_call (2/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 10s
+    rpc transient on gen_call (1/8): Request to https://studio.genlayer.com/api failed: ('Connection aborted.', RemoteDisconnec; retry in 5s
+  stranger.request_evaluation tx 0x1350c55337a102c06e3c6400ca544f8f66c79f54300f0b7b4c3c2c631867ccc5
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  CC14: APPROVED / MEETS_CRITERIA / GOLD (PANEL) held=False
+  owner.appeal tx 0xdcf1b2f5a6b637a4f9cc465f66f8591f64f85462eb66d128030c905c43bbc5e5
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  CC14:appeal: DUPLICATE_OR_DERIVATIVE / COPIED / NONE (PANEL) held=True
+  stranger.appeal tx 0x90dbec2328bc3636f0ca6a3749d825d9badf05bd07b8fa1267c761952004976e
+    FINALIZED leader ERROR votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  owner.appeal tx 0x4ec4d0b9efb1d3d169b0adb2ecacf710319b2e0bff9c412772458e9a095bd0e1
+    FINALIZED leader ERROR votes ['IDLE', 'AGREE', 'AGREE', 'AGREE', 'IDLE']
+  stranger.finalize_submission tx 0xf1c2d6f39728c1cf0c8c6ce1d6573822e1bcb0695b5692ff1638aeb2e75637e0
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+FATAL: refuse:early_finalize: leader execution SUCCESS, expected ERROR

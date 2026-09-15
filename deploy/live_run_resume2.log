@@ -1,0 +1,74 @@
+wallets: owner 0x880100f0a9f5ec5c88701049e058f49402995ab0, alice 0xef6e006cd8a68c9cfe88a3640415ab0c79c71921, bob 0x41c1be19a7726e593e09f2e8748369afbeba2580, carol 0xcc7edd6b8bcb5febcc62cf47b4923a8267831e56, dave 0x6c9de015919764af69580cbc7382a93cb788e36a, stranger 0xa141a003dc7e801517a838f88193229078a4d614
+  verified 19 source locations against local bytes
+    transient (1/8): gen_call failed (code=-32029): Rate limit exceeded: 30 requests per minute
+    rpc transient on gen_call (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+    transient (1/8): gen_call failed (code=-32029): Rate limit exceeded: 30 requests per minute
+  stranger.request_evaluation tx 0xea4c02e7b33e041e38ea22a2e9dbcb1796432f5fd6fa94589cf1e3a33896016c
+    FINALIZED leader ERROR votes ['AGREE', 'AGREE', 'IDLE', 'AGREE', 'IDLE']
+  stranger.activate_campaign tx 0x4e11c6a26c480f4c38c2666b3b23fd0bf392c033196a24918a4c2717230b1870
+    FINALIZED leader ERROR votes ['IDLE', 'AGREE', 'AGREE', 'AGREE', 'IDLE']
+  owner.reclaim_unreserved tx 0x3a23ffb9d6d89185fd71e6c7c4f29698191617dc1cf8f459703066cf883e2427
+    rpc transient on eth_getTransactionByHash (1/8): eth_getTransactionByHash returned invalid JSON: Expecting value: line 1 column 1 (char 0).; retry in 5s
+    FINALIZED leader ERROR votes ['AGREE', 'AGREE', 'IDLE', 'IDLE', 'AGREE']
+  owner.submit_contribution tx 0xeb5ca59e082fb8b9bb7aefd5a8569d26213004fc896a2b6b10c21979f0bd9904
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'AGREE', 'IDLE']
+  6 refusals held
+  owner.create_campaign tx 0xabe39e44ee4f744e398f00c3bea8a969434bb70d003c2dbf0c5c9d89aad1954d
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'AGREE', 'AGREE']
+  owner.fund_campaign tx 0x7af654d4a5a628d2e9797f93bcb7870acf5398f48094f66be940af238fe63f67
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  owner.activate_campaign tx 0x51dd962a4a3e86b4c201972dc2bcc4389f33a60747af4834ba7fe28a5212a542
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'IDLE', 'AGREE']
+  alice.submit_contribution tx 0x6dcc11c19776eb4117d68908fd2fc0fd3468c2a0569acbbcbcf9abe8e57c0da1
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'IDLE', 'AGREE']
+  stranger.close_stalled_submission tx 0x73da61ec423699e22f572af306fbbab3fbce3c516f7f5a1262180a3f6d11406c
+    FINALIZED leader ERROR votes ['AGREE', 'IDLE', 'AGREE', 'AGREE', 'IDLE']
+  waiting 64s for the stall window
+  stranger.close_stalled_submission tx 0xfca1a180a942f8a8ef5e90fe73acb3d8a04e8bf82e11281a6cbd35de0eb9eb3a
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  owner.cancel_campaign tx 0x52f862346a0aa96d18cc0caf0cbe3fef13a8a6b23416e3090001ff58387fa0eb
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'AGREE', 'IDLE']
+  owner.reclaim_unreserved tx 0x1b4d23e6b436ab9063ec3538b7658736c4c258dd1eb277894404d9513d7ee428
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'IDLE', 'AGREE', 'AGREE']
+    rpc transient on gen_call (1/8): gen_call returned invalid JSON: Expecting value: line 1 column 1 (char 0). Response conten; retry in 5s
+  stranger.finalize_submission tx 0xf54d057eb4431168f75f1ddd654178991d240a72adc71b28d60a09f67202e5e4
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'IDLE', 'AGREE', 'AGREE']
+  stranger.finalize_submission tx 0xe7785ba338e4bde948df445e10a261354c381ffafc593e39c290c4dc456da6fe
+    FINALIZED leader SUCCESS votes ['IDLE', 'IDLE', 'AGREE', 'AGREE', 'AGREE']
+  stranger.finalize_submission tx 0xd00be529f206bcb6dd7784a4b953e282b74ff4874651afc57fe8cf3573dc06d2
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  stranger.finalize_submission tx 0xb52d4b4e8c1d23662eb045ad94ec4cbd9ad9d2ad9425cd4902a00b4daad7a921
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'IDLE', 'AGREE', 'AGREE']
+  stranger.finalize_submission tx 0x22f7b3908699ef7b9fb19e7b44dec3cda8b9e892d04c86e37a4429dadd9653e3
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  stranger.finalize_submission tx 0x5cfbd363be630c7edcb7ca5779ca5c43fa0245144872433603ee5926c9daf052
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'AGREE', 'IDLE']
+  stranger.finalize_submission tx 0xff24c903dc09a5e191a41785df51525eb742f107a63b98a48562b7d1599ed671
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'IDLE', 'AGREE']
+  stranger.finalize_submission tx 0xbade4e9aa8e77ef7d4ad5cc283a277f05ba522ce5bcaa0ce9b06ee9419e67969
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'IDLE', 'AGREE', 'AGREE']
+  stranger.finalize_submission tx 0x6a757652d5ce9803c741ca828a895d61cfdde077c627f5203b57b5bd274c3a0c
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'AGREE', 'IDLE']
+  stranger.finalize_submission tx 0xeec2915279dfb5b37df9de08f03ae06724e88857ecbe94db385abef33419e3cb
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'AGREE', 'IDLE']
+    rpc transient on eth_estimateGas (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+  stranger.finalize_submission tx 0x7612eca1e229b1400d7315b154631abfb21dcc713a7ba0592e82b55903aa4b43
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  stranger.finalize_submission tx 0x8a8c454539d8b1defeb4959fddd59583c2ebe07d6551d75e62d7eda172f0a625
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'AGREE', 'IDLE']
+  stranger.finalize_submission tx 0xbe7a4baee1f04468ad7e3a8c179cf73f59df0c7e46892d4267658589944afa30
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'IDLE', 'AGREE', 'AGREE']
+  owner.withdraw tx 0xe539528bc39e93b4b1ddb923b9d1e32dd7fb9bb1201919aed7dc413104009645
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'IDLE', 'AGREE']
+  owner withdrew 65000000000000000 atto; its wallet rose by exactly that
+  alice.withdraw tx 0xaea4176e9b84457303a970ccaabda730bc3368be3d4cea1dda4bb6012912feba
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  alice withdrew 100000000000000000 atto; its wallet rose by exactly that
+  carol.withdraw tx 0xbcd898c57f436ce9dd54e524ab75b1d76f8d065a3832ec4a35bbe9f68c3835a2
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'IDLE', 'AGREE']
+  carol withdrew 35000000000000000 atto; its wallet rose by exactly that
+  dave.withdraw tx 0xe6e607c4a4abaa869e19a8ca4aace0c61df7167bb4fe0da78c4323bd144661da
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'IDLE', 'AGREE', 'AGREE']
+  dave withdrew 50000000000000000 atto; its wallet rose by exactly that
+  contract balance 530000000000000000 atto equals what it accounts for
+DONE {"held": ["CC01", "CC02", "CC03", "CC04", "CC05", "CC06", "CC07", "CC08", "CC09", "CC10", "CC11", "CC12", "CC13", "CC13:appeal", "CC14:appeal"], "not_held": ["CC14"]}

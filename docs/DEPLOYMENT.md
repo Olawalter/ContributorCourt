@@ -28,7 +28,7 @@ The deployer key is in `.data/deployer.json`, gitignored and never printed.
 | Check | Result |
 |---|---|
 | `python scripts/deploy_studionet.py --verify` | deployed and repository sha256 equal; byte-identical; 26 schema methods |
-| `python -m pytest tests/integration -q` (before the live run) | source parity, schema, views and balance checks passed; the live-outcome check waited for the transcript |
+| `python -m pytest tests/integration -q` (after the live run) | covers source parity, schema, views, balance equals accounting, every live outcome and record digest, every specification hash, settled submissions final with their entitlements. 6 of 7 passed in one run with the live-outcome check failing on transport; that check passed on its own re-run; further runs hit StudioNet's 500-requests-an-hour limit (1 opt-in live write skipped) |
 
 ## Toolchain
 
@@ -66,4 +66,13 @@ response, is in [`CONSENSUS.md`](CONSENSUS.md).
 
 ## Live run
 
-LIVE_RECORD_PENDING
+| Item | Value |
+|---|---|
+| Transcript | `deploy/live_run_transcript.json` |
+| Transactions | 71 |
+| Window | 2026-09-15T18:15:57Z to 2026-09-15T20:00:18Z |
+| Fixtures served from | `https://raw.githubusercontent.com/Olawalter/ContributorCourt/b76700cdaea19f71cdd44f1bacace0dd20bcc77f/fixtures/` |
+| Outcomes held | 15 of 16 |
+| Ledger at the end | chain balance 530000000000000000 atto = accounted 530000000000000000 atto |
+
+Results and the plain statement of what did not hold: [`../README.md`](../README.md#verified).

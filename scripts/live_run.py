@@ -322,6 +322,9 @@ def submission_of(ac: dict, cid: str, case_id: str) -> str:
 
 
 def outcome(ac: dict, key: str, sid: str, expected: list, tx: str) -> dict:
+    if key in T.get("outcomes", {}):
+        # resuming: a recorded outcome stands; the latest receipt may be a later round's
+        return T["outcomes"][key]
     record = ac["stranger"].read("get_latest_receipt", [sid])
     got = [record["status"], record["reason_code"], record["score_band"]]
     code = expected[1] in CODE_REASONS
@@ -378,8 +381,6 @@ def refusals(ac: dict, cids: dict, raw: str):
          "only the contributor or the campaign owner can appeal"),
         ("refuse:second_appeal", ac["owner"], "appeal", [subs["CC14"], "Again.", "[]"],
          "only an EVALUATED submission can be appealed, once"),
-        ("refuse:early_finalize", stranger, "finalize_submission", [subs["CC01"]],
-         "the appeal window is open until"),
         ("refuse:evaluate_twice", stranger, "request_evaluation", [subs["CC01"]],
          "only a SUBMITTED contribution awaits its evaluation"),
         ("refuse:stranger_activates", stranger, "activate_campaign", [cids["docs"]],
@@ -387,6 +388,18 @@ def refusals(ac: dict, cids: dict, raw: str):
         ("refuse:reclaim_open_pool", ac["owner"], "reclaim_unreserved", [cids["explainer"]],
          "an OPEN campaign's pool is reclaimed after its submission deadline"),
     ]
+    # the early-finalize refusal needs a submission whose window is still open now
+    open_now = [sid for sid in subs.values()
+                if stranger.read("get_submission", [sid])["status"] == "EVALUATED"
+                and epoch(stranger.read("get_submission", [sid])["appeal_deadline"])
+                > time.time() + 300]
+    if open_now:
+        tries.append(("refuse:early_finalize_open_window", stranger, "finalize_submission",
+                      [open_now[-1]], "the appeal window is open until"))
+    else:
+        T.setdefault("notes", []).append("no submission had an open appeal window when the "
+                                         "refusals ran; the early-finalize refusal is covered "
+                                         "by the Direct Mode suite only")
     held = []
     for step, who, fn, args, sentence in tries:
         record = who.write(step, fn, args, expect="ERROR")
@@ -437,7 +450,8 @@ def settle(ac: dict):
     wait_until(time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(last)),
                "for every appeal window to close")
     for case_id, sid in sorted(T["submissions"].items()):
-        stranger.write("finalize:" + case_id, "finalize_submission", [sid])
+        if stranger.read("get_submission", [sid])["status"] in ("EVALUATED", "APPEAL_EVALUATED"):
+            stranger.write("finalize:" + case_id, "finalize_submission", [sid])
         sub = stranger.read("get_submission", [sid])
         T.setdefault("settled", {})[case_id] = {k: sub[k] for k in (
             "status", "reward_atto", "bond_outcome", "finalized_at")}
